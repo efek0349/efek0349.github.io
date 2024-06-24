@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>OpenBSD ile blog olusturma sureci</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="efek0349">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.dark.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.dark.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/" type="application/atom+xml" rel="alternate" title="Efek Blog ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Efek Blog </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="/category/hello.html">
+						<i class="icon-folder-open icon-large"></i>hello
+					</a>
+                  </li>
+                  <li class="active">
+                    <a href="/category/openbsd.html">
+						<i class="icon-folder-open icon-large"></i>OpenBSD
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to OpenBSD ile blog olusturma sureci">
+                                        OpenBSD ile blog olusturma sureci
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2024-06-24T16:29:00+03:00">
+        <i class="icon-calendar"></i>Mon 24 June 2024
+</abbr>
+<span class="label">By</span>
+<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
+<span class="label">Category</span>
+<a href="/category/openbsd.html"><i class="icon-folder-open"></i>OpenBSD</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/prosesh.html"><i class="icon-tag"></i>prose.sh</a>
+	<a href="/tag/github.html"><i class="icon-tag"></i>github</a>
+	<a href="/tag/blog.html"><i class="icon-tag"></i>blog</a>
+	<a href="/tag/openbsd.html"><i class="icon-tag"></i>OpenBSD</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Merhaba, bir blog olusturma surecine girdim. Aslinda daha onceleri blog
+olusturdum. (Pek yazi yazmadim) Bu konuda deneyimliyim blog olusturmada!
+Blog'um uzerinde sistem,programlama ve elektronik konularinda paylasimlar
+yapmaya karar verdim. Daha once forumlar uzerinde paylasimlarda bulunuyordum
+zaten. <strong>('nix sistemler, yazilim ve elektronik tamir')</strong></p>
+<p>Github, uzerinde paylasimlarda bulunuyorum zaman zaman ama blog acip yazi
+yazmadim. Bir arama surecine girdim ve benim icin  onemli olan kriter basit
+ve kolaylik <a href="https://pico.sh">pico.sh</a> sitesine goturdu. Github da kolay ama
+baska yer olsun istedim. Blogumu bu site uzerinde olusturmaya basladim.
+<strong>efek.prose.sh</strong> adinda bir blog actim. Ancak pek kolay olmadi kendi isletim
+sistemimde. Kisisel laptobumda <strong>OpenBSD-current</strong> ile <strong>MacOS-Sonoma</strong> kullanmaktayim. MacOS
+ile blog olusturmak istedigimde baglantida herhangi bir sorun yasamadim. <strong>ssh
+pico.sh</strong> dedigimde baglaniyorum.OpenBSD ile denedigimde ise baglantida sorun
+yasiyorum.Aslinda baglanmaya calisyor surekli ama bir turlu mutlu resmi
+goremedim ne yazik!</p>
+<p><img alt="pico.png" src="screnshots/pico.png"></p>
+<p>Beklememe ragmen baglanti kurulamiyor! <strong>ssh -v pico.sh</strong> komutu ile baktigimda
+burada takildigini gordum.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span>-v<span class="w"> </span>pico.sh
+OpenSSH_9.7,<span class="w"> </span>LibreSSL<span class="w"> </span><span class="m">3</span>.9.0
+debug1:<span class="w"> </span>Reading<span class="w"> </span>configuration<span class="w"> </span>data<span class="w"> </span>/home/efek/.ssh/config
+debug1:<span class="w"> </span>/home/efek/.ssh/config<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Applying<span class="w"> </span>options<span class="w"> </span><span class="k">for</span><span class="w"> </span>pico.sh
+debug1:<span class="w"> </span>Reading<span class="w"> </span>configuration<span class="w"> </span>data<span class="w"> </span>/etc/ssh/ssh_config
+debug1:<span class="w"> </span>Connecting<span class="w"> </span>to<span class="w"> </span>pico.sh<span class="w"> </span><span class="o">[</span><span class="m">141</span>.148.85.132<span class="o">]</span><span class="w"> </span>port<span class="w"> </span><span class="m">22</span>.
+debug1:<span class="w"> </span>Connection<span class="w"> </span>established.
+debug1:<span class="w"> </span>identity<span class="w"> </span>file<span class="w"> </span>/home/efek/.ssh/id_ed25519<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="m">3</span>
+debug1:<span class="w"> </span>identity<span class="w"> </span>file<span class="w"> </span>/home/efek/.ssh/id_ed25519-cert<span class="w"> </span><span class="nb">type</span><span class="w"> </span>-1
+debug1:<span class="w"> </span>Local<span class="w"> </span>version<span class="w"> </span>string<span class="w"> </span>SSH-2.0-OpenSSH_9.7
+debug1:<span class="w"> </span>Remote<span class="w"> </span>protocol<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.0,<span class="w"> </span>remote<span class="w"> </span>software<span class="w"> </span>version<span class="w"> </span>Go
+debug1:<span class="w"> </span>compat_banner:<span class="w"> </span>no<span class="w"> </span>match:<span class="w"> </span>Go
+debug1:<span class="w"> </span>Authenticating<span class="w"> </span>to<span class="w"> </span>pico.sh:22<span class="w"> </span>as<span class="w"> </span><span class="s1">&#39;efek&#39;</span>
+debug1:<span class="w"> </span>load_hostkeys:<span class="w"> </span>fopen<span class="w"> </span>/home/efek/.ssh/known_hosts2:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+debug1:<span class="w"> </span>load_hostkeys:<span class="w"> </span>fopen<span class="w"> </span>/etc/ssh/ssh_known_hosts:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+debug1:<span class="w"> </span>load_hostkeys:<span class="w"> </span>fopen<span class="w"> </span>/etc/ssh/ssh_known_hosts2:<span class="w"> </span>No<span class="w"> </span>such<span class="w"> </span>file<span class="w"> </span>or<span class="w"> </span>directory
+debug1:<span class="w"> </span>SSH2_MSG_KEXINIT<span class="w"> </span>sent
+debug1:<span class="w"> </span>SSH2_MSG_KEXINIT<span class="w"> </span>received
+debug1:<span class="w"> </span>kex:<span class="w"> </span>algorithm:<span class="w"> </span>curve25519-sha256
+debug1:<span class="w"> </span>kex:<span class="w"> </span>host<span class="w"> </span>key<span class="w"> </span>algorithm:<span class="w"> </span>ssh-ed25519
+debug1:<span class="w"> </span>kex:<span class="w"> </span>server-&gt;client<span class="w"> </span>cipher:<span class="w"> </span>chacha20-poly1305@openssh.com<span class="w"> </span>MAC:<span class="w"> </span>&lt;implicit&gt;<span class="w"> </span>compression:<span class="w"> </span>none
+debug1:<span class="w"> </span>kex:<span class="w"> </span>client-&gt;server<span class="w"> </span>cipher:<span class="w"> </span>chacha20-poly1305@openssh.com<span class="w"> </span>MAC:<span class="w"> </span>&lt;implicit&gt;<span class="w"> </span>compression:<span class="w"> </span>none
+debug1:<span class="w"> </span>expecting<span class="w"> </span>SSH2_MSG_KEX_ECDH_REPLY
+</code></pre></div>
+
+<p>Bu sorunun sistemden kaynaklandigi anladim. Adrese  ping gonderdigim zaman
+geri donus olmaktaydi.OpenSSH yazilimina baktigimda, LibreSSL kullandigini
+gordum. Zaten OpenBSD de bir degisklik yapmadiginiz surece LibreSSL kullaniyor.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span>-V
+OpenSSH_9.7,<span class="w"> </span>LibreSSL<span class="w"> </span><span class="m">3</span>.9.0
+</code></pre></div>
+
+<p>LibreSSL, OpenBSD'in guvenlik odakli gelistirdigi bir SSL yazilimi..<strong>(OpenSSL catali)</strong>
+OpenSSH'i, LibreSSL ile degil de OpenSSL ile entegreli tekrar derlersem bu
+sorunu asacagimi saniyorum ve ellerimi kirletme zamani gelmistir diyerek,
+baslatim OpenSSH yazilimi indirmeye!
+Bu <a href="https://www.openssh.com/openbsd.html">adreste</a> derleme icin gerekli bilgiler bulunmakta ama OpenSSL nerede!!!
+Soyle bir depolarda arama yaptigimda, OpenSSL yazilimin depolarda oldugunu
+gordum.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pkg_find<span class="w"> </span>openssl
+<span class="w">     </span><span class="m">1</span><span class="w">  </span>debug-openssl-1.1.1wp1v0
+<span class="w">     </span><span class="m">2</span><span class="w">  </span>debug-openssl-3.1.6v0
+<span class="w">     </span><span class="m">3</span><span class="w">  </span>debug-openssl-3.2.2v0
+<span class="w">     </span><span class="m">4</span><span class="w">  </span>debug-openssl-3.3.1v0
+<span class="w">     </span><span class="m">5</span><span class="w">  </span>openssl-1.1.1wp1v0
+<span class="w">     </span><span class="m">6</span><span class="w">  </span>openssl-3.1.6v0
+<span class="w">     </span><span class="m">7</span><span class="w">  </span>openssl-3.2.2v0
+<span class="w">     </span><span class="m">8</span><span class="w">  </span>openssl-3.3.1v0
+</code></pre></div>
+
+<p>Ben burada <strong>'openssl-3.2.2v0'</strong> surumunu kullandim. Neden mi? <strong>OpenVPN</strong> icin de onu
+kullandim. Biraz daha stabil bir surumu.
+OpenSSH yazilimi derleme islemine gecmeden once biraz duzenlemem gerekti.
+Onun icin <strong>'Makefile.inc'</strong> dosyasina soyle bir ekleme yaptim!</p>
+<div class="highlight"><pre><span></span><code>OPENSSL?=<span class="w">   </span>no
+ZLIB?=<span class="w">      </span>yes
+DSAKEY?=<span class="w">    </span>yes
+
+.if<span class="w"> </span>(<span class="cp">${</span><span class="n">OPENSSL</span><span class="p">:</span><span class="n">L</span><span class="cp">}</span><span class="w"> </span>==<span class="w"> </span>&quot;yes&quot;)
+#CFLAGS+=<span class="w">   </span>-DWITH_OPENSSL
+OPENSSL_LIBS=&quot;-L/usr/local/lib/eopenssl32<span class="w"> </span>-Wl,-rpath,/usr/local/lib/eopenssl32<span class="w"> </span>-lssl<span class="w"> </span>-lcrypto&quot;<span class="w"> </span>\
+OPENSSL_CFLAGS=&quot;-I/usr/local/include/eopenssl32/&quot;<span class="w"> </span>--with-crypto-library=openssl<span class="w"> </span>\
+</code></pre></div>
+
+<p>Yazilimi derleme islemi sorunsuz tamamlandigi zaman  surum kontrolu yaptigimda!</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>/home/efek/code/ssh/ssh<span class="w"> </span>-V
+OpenSSH_9.7,<span class="w"> </span>without<span class="w"> </span>OpenSSL
+</code></pre></div>
+
+<p>Sorunsuz bir sekilde LibreSSL yerine artik OpenSSL olarak degistigini gordum!
+Bana bu kadar yeterli diye kontrol ettigimde. <strong>libcryto.so</strong> kitapliginin
+baglanmadigini gordum.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ldd<span class="w"> </span>/home/efek/code/ssh/ssh/obj/ssh
+/home/efek/code/ssh/ssh/obj/ssh:
+<span class="w">    </span>Start<span class="w">            </span>End<span class="w">              </span>Type<span class="w">  </span>Open<span class="w"> </span>Ref<span class="w"> </span>GrpRef<span class="w"> </span>Name
+<span class="w">    </span>000005e6a49b8000<span class="w"> </span>000005e6a4a87000<span class="w"> </span>exe<span class="w">   </span><span class="m">1</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/home/efek/code/ssh/ssh/obj/ssh
+<span class="w">    </span>000005e8d9581000<span class="w"> </span>000005e8d9599000<span class="w"> </span>rlib<span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/usr/lib/libutil.so.18.0
+<span class="w">    </span>000005e989eb3000<span class="w"> </span>000005e989ed1000<span class="w"> </span>rlib<span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/usr/lib/libz.so.7.0
+<span class="w">    </span>000005e98ce9b000<span class="w"> </span>000005e98cfa1000<span class="w"> </span>rlib<span class="w">  </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/usr/lib/libc.so.100.1
+<span class="w">    </span>000005e902cee000<span class="w"> </span>000005e902cee000<span class="w"> </span>ld.so<span class="w"> </span><span class="m">0</span><span class="w">    </span><span class="m">1</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/usr/libexec/ld.so
+</code></pre></div>
+
+<p>Sonra ugrasmak yerine deneme yapmaya karar verdim ve sonuc basariliydi.</p>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">obj</span><span class="o">/</span><span class="n">ssh</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">OpenSSH_9</span><span class="o">.</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">without</span><span class="w"> </span><span class="n">OpenSSL</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Reading</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">Applying</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Reading</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_config</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Connecting</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span><span class="w"> </span><span class="p">[</span><span class="mf">141.148</span><span class="o">.</span><span class="mf">85.132</span><span class="p">]</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="mf">22.</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">established</span><span class="o">.</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">identity</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="mi">3</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">identity</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="o">-</span><span class="n">cert</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Local</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="n">SSH</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="n">OpenSSH_9</span><span class="o">.</span><span class="mi">7</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Remote</span><span class="w"> </span><span class="n">protocol</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="k">remote</span><span class="w"> </span><span class="n">software</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">Go</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">compat_banner</span><span class="p">:</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="k">match</span><span class="p">:</span><span class="w"> </span><span class="n">Go</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Authenticating</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span><span class="p">:</span><span class="mi">22</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s1">&#39;efek&#39;</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_KEXINIT</span><span class="w"> </span><span class="n">sent</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_KEXINIT</span><span class="w"> </span><span class="n">received</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex</span><span class="p">:</span><span class="w"> </span><span class="n">algorithm</span><span class="p">:</span><span class="w"> </span><span class="n">curve25519</span><span class="o">-</span><span class="n">sha256</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex</span><span class="p">:</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">algorithm</span><span class="p">:</span><span class="w"> </span><span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex</span><span class="p">:</span><span class="w"> </span><span class="n">server</span><span class="o">-&gt;</span><span class="n">client</span><span class="w"> </span><span class="n">cipher</span><span class="p">:</span><span class="w"> </span><span class="n">chacha20</span><span class="o">-</span><span class="n">poly1305</span><span class="err">@</span><span class="n">openssh</span><span class="o">.</span><span class="n">com</span><span class="w"> </span><span class="n">MAC</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">implicit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compression</span><span class="p">:</span><span class="w"> </span><span class="n">none</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex</span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="o">-&gt;</span><span class="n">server</span><span class="w"> </span><span class="n">cipher</span><span class="p">:</span><span class="w"> </span><span class="n">chacha20</span><span class="o">-</span><span class="n">poly1305</span><span class="err">@</span><span class="n">openssh</span><span class="o">.</span><span class="n">com</span><span class="w"> </span><span class="n">MAC</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">implicit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compression</span><span class="p">:</span><span class="w"> </span><span class="n">none</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">expecting</span><span class="w"> </span><span class="n">SSH2_MSG_KEX_ECDH_REPLY</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_KEX_ECDH_REPLY</span><span class="w"> </span><span class="n">received</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span><span class="w"> </span><span class="n">SHA256</span><span class="p">:</span><span class="o">....</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Host</span><span class="w"> </span><span class="s1">&#39;pico.sh&#39;</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">known</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ED25519</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="n">key</span><span class="o">.</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Found</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts</span><span class="p">:</span><span class="mi">10</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">ssh_packet_send2_wrapped</span><span class="p">:</span><span class="w"> </span><span class="n">resetting</span><span class="w"> </span><span class="n">send</span><span class="w"> </span><span class="n">seqnr</span><span class="w"> </span><span class="mi">3</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">rekey</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="mi">134217728</span><span class="w"> </span><span class="n">blocks</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_NEWKEYS</span><span class="w"> </span><span class="n">sent</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">expecting</span><span class="w"> </span><span class="n">SSH2_MSG_NEWKEYS</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">ssh_packet_read_poll2</span><span class="p">:</span><span class="w"> </span><span class="n">resetting</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">seqnr</span><span class="w"> </span><span class="mi">3</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_NEWKEYS</span><span class="w"> </span><span class="n">received</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">rekey</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">after</span><span class="w"> </span><span class="mi">134217728</span><span class="w"> </span><span class="n">blocks</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_EXT_INFO</span><span class="w"> </span><span class="n">received</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex_ext_info_client_parse</span><span class="p">:</span><span class="w"> </span><span class="n">server</span><span class="o">-</span><span class="n">sig</span><span class="o">-</span><span class="n">algs</span><span class="o">=&lt;...</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex_ext_info_check_ver</span><span class="p">:</span><span class="w"> </span><span class="n">ping</span><span class="err">@</span><span class="n">openssh</span><span class="o">.</span><span class="n">com</span><span class="o">=&lt;</span><span class="mi">0</span><span class="o">&gt;</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_SERVICE_ACCEPT</span><span class="w"> </span><span class="n">received</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Authentications</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="k">continue</span><span class="p">:</span><span class="w"> </span><span class="n">publickey</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Next</span><span class="w"> </span><span class="n">authentication</span><span class="w"> </span><span class="n">method</span><span class="p">:</span><span class="w"> </span><span class="n">publickey</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">get_agent_identities</span><span class="p">:</span><span class="w"> </span><span class="n">bound</span><span class="w"> </span><span class="n">agent</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">hostkey</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">get_agent_identities</span><span class="p">:</span><span class="w"> </span><span class="n">agent</span><span class="w"> </span><span class="n">returned</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">keys</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Will</span><span class="w"> </span><span class="n">attempt</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="w"> </span><span class="o">...</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Offering</span><span class="w"> </span><span class="n">public</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="w"> </span><span class="n">D25519</span><span class="w"> </span><span class="n">SHA256</span><span class="p">:</span><span class="o">...</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">accepts</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_ed25519</span><span class="w"> </span><span class="n">ED25519</span><span class="w"> </span><span class="n">SHA256</span><span class="p">:</span><span class="o">...</span>
+<span class="n">Authenticated</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span><span class="w"> </span><span class="p">([</span><span class="mf">141.148</span><span class="o">.</span><span class="mf">85.132</span><span class="p">]:</span><span class="mi">22</span><span class="p">)</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="s2">&quot;publickey&quot;</span><span class="o">.</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="p">[</span><span class="n">client</span><span class="o">-</span><span class="n">session</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">inactive</span><span class="w"> </span><span class="n">timeout</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Entering</span><span class="w"> </span><span class="n">interactive</span><span class="w"> </span><span class="n">session</span><span class="o">.</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">pledge</span><span class="p">:</span><span class="w"> </span><span class="n">filesystem</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">client_input_channel_req</span><span class="p">:</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">rtype</span><span class="w"> </span><span class="n">exit</span><span class="o">-</span><span class="n">status</span><span class="w"> </span><span class="n">reply</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="n">free</span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="o">-</span><span class="n">session</span><span class="p">,</span><span class="w"> </span><span class="n">nchannels</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">Connection</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pico</span><span class="o">.</span><span class="n">sh</span><span class="w"> </span><span class="n">closed</span><span class="o">.</span>
+<span class="n">Transferred</span><span class="p">:</span><span class="w"> </span><span class="n">sent</span><span class="w"> </span><span class="mi">1956</span><span class="p">,</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="mi">2696</span><span class="w"> </span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">29.9</span><span class="w"> </span><span class="n">seconds</span>
+<span class="n">Bytes</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">second</span><span class="p">:</span><span class="w"> </span><span class="n">sent</span><span class="w"> </span><span class="mf">65.5</span><span class="p">,</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="mf">90.2</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Exit</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="mi">0</span>
+</code></pre></div>
+
+<p><img alt="ssh-ossl.png" src="screnshots/ssh-ossl.png"></p>
+<p>Basarili bir sekilde sisteme giris yaptim ve herhangi bir sorun gormedim. Tam
+anlamiyla sisteme entegre edilecekse derleme dosyalari daha detayli
+incelenmeli ve gerekli yapisal duzenlemeler yapilmali!
+Ben <strong>efek.prose.sh</strong> blogumun giris bilgilerimi kaybettigim icin kullanamadim. :)
+Siz siz olun giris bilgilerinizi  yedekleme yapmayi unutmayin. Donmek zorunda
+kaldim kupcu dukkanina. :)</p>
+<p>Not: Daha iyi bir yontem bulabilen olursa haber versin!</p>
+                </div><!-- /.entry-content -->
+        </article>
+</section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://github.com/efek0349/macos-e480"><i class="icon-external-link"></i>MacOS-e480 opencore</a></li>
+    <li><a href="https://github.com/efek0349/dotfiles"><i class="icon-external-link"></i>dotfiles</a></li>
+    <li><a href="https://github.com/efek0349/prog_scripts"><i class="icon-external-link"></i>prog_scripts</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="https://t.me/efek0349"><i class="icon-telegram-sign icon-large"></i>telegram</a></li>
+    <li><a href="https://twitter.com/efek0349"><i class="icon-X-sign icon-large"></i>X</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="/category/hello.html">
+    <i class="icon-folder-open icon-large"></i>hello
+</a>
+</li>
+<li>
+<a href="/category/openbsd.html">
+    <i class="icon-folder-open icon-large"></i>OpenBSD
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+					Email: kndmrefe@gmail.com
+        </address><!-- /#about -->
+
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>
