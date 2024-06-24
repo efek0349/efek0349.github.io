@@ -137,7 +137,7 @@ goremedim ne yazik!</p>
 <p><img alt="pico.png" src="screnshots/pico.png"></p>
 <p>Beklememe ragmen baglanti kurulamiyor! <strong>ssh -v pico.sh</strong> komutu ile baktigimda
 burada takildigini gordum.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span>-v<span class="w"> </span>pico.sh<span class="w">   </span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span>-v<span class="w"> </span>pico.sh
 OpenSSH_9.7,<span class="w"> </span>LibreSSL<span class="w"> </span><span class="m">3</span>.9.0
 debug1:<span class="w"> </span>Reading<span class="w"> </span>configuration<span class="w"> </span>data<span class="w"> </span>/home/efek/.ssh/config
 debug1:<span class="w"> </span>/home/efek/.ssh/config<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Applying<span class="w"> </span>options<span class="w"> </span><span class="k">for</span><span class="w"> </span>pico.sh
@@ -162,8 +162,9 @@ debug1:<span class="w"> </span>kex:<span class="w"> </span>client-&gt;server<spa
 debug1:<span class="w"> </span>expecting<span class="w"> </span>SSH2_MSG_KEX_ECDH_REPLY
 </code></pre></div>
 
-<p>Bu sorunun sistemden kaynaklandigi anladim ve OpenSSH yazilimina baktigimda,
-LibreSSL kullandigini gordum.</p>
+<p>Bu sorunun sistemden kaynaklandigi anladim. Adrese  ping gonderdigim zaman
+geri donus olmaktaydi.OpenSSH yazilimina baktigimda, LibreSSL kullandigini
+gordum. Zaten OpenBSD de bir degisklik yapmadiginiz surece LibreSSL kullaniyor.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>ssh<span class="w"> </span>-V
 OpenSSH_9.7,<span class="w"> </span>LibreSSL<span class="w"> </span><span class="m">3</span>.9.0
 </code></pre></div>
@@ -208,7 +209,7 @@ OpenSSH_9.7,<span class="w"> </span>without<span class="w"> </span>OpenSSL
 <p>Sorunsuz bir sekilde LibreSSL yerine artik OpenSSL olarak degistigini gordum!
 Bana bu kadar yeterli diye kontrol ettigimde. <strong>libcryto.so</strong> kitapliginin
 baglanmadigini gordum.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ldd<span class="w"> </span>/home/efek/code/ssh/ssh/obj/ssh<span class="w">                                             </span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ldd<span class="w"> </span>/home/efek/code/ssh/ssh/obj/ssh
 /home/efek/code/ssh/ssh/obj/ssh:
 <span class="w">    </span>Start<span class="w">            </span>End<span class="w">              </span>Type<span class="w">  </span>Open<span class="w"> </span>Ref<span class="w"> </span>GrpRef<span class="w"> </span>Name
 <span class="w">    </span>000005e6a49b8000<span class="w"> </span>000005e6a4a87000<span class="w"> </span>exe<span class="w">   </span><span class="m">1</span><span class="w">    </span><span class="m">0</span><span class="w">   </span><span class="m">0</span><span class="w">      </span>/home/efek/code/ssh/ssh/obj/ssh
@@ -243,7 +244,7 @@ baglanmadigini gordum.</p>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">kex</span><span class="p">:</span><span class="w"> </span><span class="n">client</span><span class="o">-&gt;</span><span class="n">server</span><span class="w"> </span><span class="n">cipher</span><span class="p">:</span><span class="w"> </span><span class="n">chacha20</span><span class="o">-</span><span class="n">poly1305</span><span class="err">@</span><span class="n">openssh</span><span class="o">.</span><span class="n">com</span><span class="w"> </span><span class="n">MAC</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;</span><span class="n">implicit</span><span class="o">&gt;</span><span class="w"> </span><span class="n">compression</span><span class="p">:</span><span class="w"> </span><span class="n">none</span>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">expecting</span><span class="w"> </span><span class="n">SSH2_MSG_KEX_ECDH_REPLY</span>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">SSH2_MSG_KEX_ECDH_REPLY</span><span class="w"> </span><span class="n">received</span>
-<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span><span class="w"> </span><span class="n">SHA256</span><span class="p">:</span><span class="n">jEf</span><span class="o">+</span><span class="n">VmhneNREXK3vXKDY65CsUjQoUU1iz4fjZgv71</span><span class="o">/</span><span class="n">o</span>
+<span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">host</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span><span class="w"> </span><span class="n">SHA256</span><span class="p">:</span><span class="o">....</span>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
 <span class="n">debug1</span><span class="p">:</span><span class="w"> </span><span class="n">load_hostkeys</span><span class="p">:</span><span class="w"> </span><span class="n">fopen</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_known_hosts2</span><span class="p">:</span><span class="w"> </span><span class="n">No</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">directory</span>
@@ -297,7 +298,7 @@ kaldim kupcu dukkanina. :)</p>
 <li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
     <li><a href="https://github.com/efek0349/macos-e480"><i class="icon-external-link"></i>MacOS-e480 opencore</a></li>
     <li><a href="https://github.com/efek0349/dotfiles"><i class="icon-external-link"></i>dotfiles</a></li>
-    <li><a href="https://github.com/efek0349/prog_scripts"><i class="icon-external-link"></i>prog_scripts</a></li>
+    <li><a href="https://github.com/efek0349/obsd-progs"><i class="icon-external-link"></i>obsd-ports</a></li>
 <li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
 <li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
     <li><a href="https://t.me/efek0349"><i class="icon-telegram-sign icon-large"></i>telegram</a></li>
