@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kali ile modul derleme ve bios programlama.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="efek0349">
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.dark.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="/theme/css/bootstrap-responsive.dark.css" rel="stylesheet">
+        <link href="/theme/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="/" type="application/atom+xml" rel="alternate" title="Efek Blog ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/index.html">Efek Blog </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="/category/hello.html">
+						<i class="icon-folder-open icon-large"></i>hello
+					</a>
+                  </li>
+                  <li class="active">
+                    <a href="/category/kali.html">
+						<i class="icon-folder-open icon-large"></i>Kali
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/openbsd.html">
+						<i class="icon-folder-open icon-large"></i>OpenBSD
+					</a>
+                  </li>
+                  <li >
+                    <a href="/category/xiaomi.html">
+						<i class="icon-folder-open icon-large"></i>Xiaomi
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to Kali ile modul derleme ve bios programlama.">
+                                        Kali ile modul derleme ve bios programlama.
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2024-02-08T23:31:00+03:00">
+        <i class="icon-calendar"></i>Thu 08 February 2024
+</abbr>
+<span class="label">By</span>
+<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
+<span class="label">Category</span>
+<a href="/category/kali.html"><i class="icon-folder-open"></i>Kali</a>.
+
+
+<span class="label">Tags</span>
+	<a href="/tag/kali.html"><i class="icon-tag"></i>Kali</a>
+	<a href="/tag/bios.html"><i class="icon-tag"></i>bios</a>
+	<a href="/tag/eeprom.html"><i class="icon-tag"></i>eeprom</a>
+	<a href="/tag/modul.html"><i class="icon-tag"></i>modul</a>
+	<a href="/tag/kernel.html"><i class="icon-tag"></i>kernel</a>
+	<a href="/tag/linux.html"><i class="icon-tag"></i>linux</a>
+	<a href="/tag/programlama.html"><i class="icon-tag"></i>programlama</a>
+</footer><!-- /.post-info -->                </div>
+                <p>Elimde bir <strong>eeprom</strong> programlayici var ve bunu <code>linux</code> uzerinde kulanmak istedim.
+Guncel suruculerini <a href="https://github.com/YTEC-info/CH341A-Softwares">Bu adreste</a> buldum.</p>
+<p>Ilk olarak depoyu <code>git</code> ile yerele klonladim.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YTEC-info/CH341A-Softwares
+</code></pre></div>
+
+<p>Sonra benim icin gerekli olan dizine girdim.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CH341A-Softwares/Drivers/LINUX/2023
+</code></pre></div>
+
+<p><code>ls</code> komutu ile dizin icerigine baktigimda</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ls
+CH341PAR_LINUX.ZIP<span class="w">  </span>CH341SER_LINUX.ZIP<span class="w">  </span>readme.md
+</code></pre></div>
+
+<p>2 tane arsiv dosyasi buldum  ve   <code>unzip</code> ile cikardim.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>unzip<span class="w"> </span>CH341SER_LINUX.ZIP
+</code></pre></div>
+
+<p>Niye  <code>CH341SER_LINUX.ZIP</code> dosyasi diye sorarsaniz. Nedeni asagida...</p>
+<ul>
+<li><strong>CH341SER_LINUX.ZIP</strong>: USB to Serial (RS232) adaptorleri icin suruculer icerir.</li>
+<li>CH341PAR_LINUX.ZIP: USB to Parallel (LPT) adaptorleri icin suruculer icerir.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CH341SER_LINUX/driver
+$<span class="w"> </span>ls
+Makefile<span class="w">  </span>ch341.c<span class="w">  </span>ch341.h
+</code></pre></div>
+
+<p>Bir Makefile gordum. Direk <code>make</code> komutu ile derlemeye basladim. Tabi ben bu islemler icin
+<strong>kali linux</strong> kullanmaktayim. Linux da cekirdek modulleri derlemek icin bazi ekstra kurulumlar gerekli.
+Sizler kendi dagitiminiza gore kurulum gerceklestirebilirsiniz.</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">make</span>
+<span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8.11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">build</span><span class="w">  </span><span class="n">M</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Entering</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+<span class="w">  </span><span class="n">CC</span><span class="w"> </span><span class="o">[</span><span class="n">M</span><span class="o">]</span><span class="w">  </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">o</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">1095</span><span class="err">:</span><span class="mi">20</span><span class="err">:</span><span class="w"> </span><span class="nl">error</span><span class="p">:</span><span class="w"> </span><span class="n">initialization</span><span class="w"> </span><span class="k">of</span>
+<span class="w">    </span><span class="err">‘</span><span class="n">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_port</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">bool</span><span class="p">)</span><span class="err">’</span><span class="w"> </span><span class="err">{</span><span class="n">aka</span><span class="w"> </span><span class="err">‘</span><span class="n">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_port</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">_Bool</span><span class="p">)</span><span class="err">’}</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">incompatible</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="n">type</span>
+<span class="w">    </span><span class="err">‘</span><span class="n">void</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_port</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nc">int</span><span class="p">)</span><span class="err">’</span><span class="w"> </span><span class="o">[</span><span class="n">-Werror=incompatible-pointer-types</span><span class="o">]</span>
+<span class="w"> </span><span class="mi">1095</span><span class="w"> </span><span class="o">|</span><span class="w">         </span><span class="p">.</span><span class="n">dtr_rts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch341_port_dtr_rts</span><span class="p">,</span>
+<span class="w">      </span><span class="o">|</span><span class="w">                    </span><span class="o">^~~~~~~~~~~~~~~~~~</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">1095</span><span class="err">:</span><span class="mi">20</span><span class="err">:</span><span class="w"> </span><span class="nl">note</span><span class="p">:</span>
+<span class="w">    </span><span class="p">(</span><span class="n">near</span><span class="w"> </span><span class="n">initialization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">‘</span><span class="n">ch341_port_ops</span><span class="p">.</span><span class="n">dtr_rts</span><span class="err">’</span><span class="p">)</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">1454</span><span class="err">:</span><span class="mi">18</span><span class="err">:</span><span class="w"> </span><span class="nl">error</span><span class="p">:</span>
+<span class="w">    </span><span class="n">initialization</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="err">‘</span><span class="n">ssize_t</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_struct</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">const</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">size_t</span><span class="p">)</span><span class="err">’</span><span class="w"> </span><span class="err">{</span><span class="n">aka</span><span class="w"> </span><span class="err">‘</span><span class="n">long</span><span class="w"> </span><span class="nc">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_struct</span><span class="w"> </span><span class="o">*</span><span class="p">,</span>
+<span class="w">    </span><span class="n">const</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nc">char</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">long</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nc">int</span><span class="p">)</span><span class="err">’}</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">incompatible</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="err">‘</span><span class="nc">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_struct</span><span class="w"> </span><span class="o">*</span><span class="p">,</span>
+<span class="w">    </span><span class="n">const</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nc">char</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="nc">int</span><span class="p">)</span><span class="err">’</span><span class="w"> </span><span class="o">[</span><span class="n">-Werror=incompatible-pointer-types</span><span class="o">]</span>
+<span class="w"> </span><span class="mi">1454</span><span class="w"> </span><span class="o">|</span><span class="w">         </span><span class="p">.</span><span class="k">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch341_tty_write</span><span class="p">,</span>
+<span class="w">      </span><span class="o">|</span><span class="w">                  </span><span class="o">^~~~~~~~~~~~~~~</span>
+<span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="nl">c</span><span class="p">:</span><span class="mi">1454</span><span class="err">:</span><span class="mi">18</span><span class="err">:</span><span class="w"> </span><span class="nl">note</span><span class="p">:</span>
+<span class="w">    </span><span class="p">(</span><span class="n">near</span><span class="w"> </span><span class="n">initialization</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">‘</span><span class="n">ch341_ops</span><span class="p">.</span><span class="k">write</span><span class="err">’</span><span class="p">)</span>
+<span class="nl">cc1</span><span class="p">:</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">warnings</span><span class="w"> </span><span class="n">being</span><span class="w"> </span><span class="n">treated</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">errors</span>
+<span class="n">make</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="o">***</span><span class="w"> </span><span class="o">[</span><span class="n">/usr/src/linux-headers-6.8.11-common/scripts/Makefile.build:248:</span>
+<span class="n">    /home/efek/code/CH341A-Softwares/Drivers/LINUX/2023/CH341SER_LINUX/driver/ch341.o</span><span class="o">]</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">make</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="o">***</span><span class="w"> </span><span class="o">[</span><span class="n">/usr/src/linux-headers-6.8.11-common/Makefile:1946:</span>
+<span class="n">    /home/efek/code/CH341A-Softwares/Drivers/LINUX/2023/CH341SER_LINUX/driver</span><span class="o">]</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="o">***</span><span class="w"> </span><span class="o">[</span><span class="n">/usr/src/linux-headers-6.8.11-common/Makefile:252: __sub-make</span><span class="o">]</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="mi">2</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Leaving</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+<span class="nl">make</span><span class="p">:</span><span class="w"> </span><span class="o">***</span><span class="w"> </span><span class="o">[</span><span class="n">Makefile:5: default</span><span class="o">]</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div>
+
+<p>Karsimiza yazilim sorunlari cikmakta. Simdi kisaca bunlardan soz edip, kodlarimizi duzenleme asamasina gecelim ve tekrar derleyelim.</p>
+<h2>Ilk sorunumuz</h2>
+<p>Bu hata, <code>dtr_rts</code> isaretcisi <code>tty_port</code> yapi tipini alan bir islevi gosteren bir isaretci olmasini beklerken,
+    <code>ch341_port_dtr_rts</code> fonksiyonunun parametre turunun uyumsuz olmasi nedeniyle meydana gelir. Yani, <code>dtr_rts</code>
+    isaretcisi <code>void (*)(struct tty_port *, bool)</code> turunde bir islev isaretcisi olmali, ancak <code>ch341_port_dtr_rts</code>
+    fonksiyonunun prototipi <code>void (*)(struct tty_port *, int)</code> gibi gorunuyor.</p>
+<p>Bu uyumsuzluğu cozmek icin <code>ch341_port_dtr_rts</code> fonksiyonunun imzasini <code>bool</code> tipiyle uyumlu hale getirmeniz gerekecektir.</p>
+<p>Asagidaki sekilde.</p>
+<p><code>void ch341_port_dtr_rts(struct tty_port *port, bool on) {</code></p>
+<h2>Ikinci sorunumuz</h2>
+<p>Bu hatada, <code>ch341_tty_write</code> fonksiyonunun imzasinin, <code>write</code> isaretcisinin beklediği imzayla uyumlu olmadiğini belirtir.
+<code>write</code> isaretcisi, <code>ssize_t (*)(struct tty_struct *, const u8 *, size_t)</code> turunde bir islev isaretcisi olmalidir. Ancak
+<code>ch341_tty_write</code> fonksiyonu <code>int (*)(struct tty_struct *, const unsigned char *, int)</code> turunde tanimlanmis.</p>
+<h3>Cozumu</h3>
+<p>Fonksiyon imzasini, <code>write</code> isaretcisinin beklediği turle uyumlu hale getirmeliyiz. Yani, <code>int</code> yerine <code>ssize_t</code> ve <code>size_t</code> turlerini kullanmaliyiz.</p>
+<p>Soyle bir yama hazirladim!</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tty_port_open</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ch341</span><span class="o">-&gt;</span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="n">tty</span><span class="p">,</span><span class="w"> </span><span class="n">filp</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+
+<span class="o">-</span><span class="k">static</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">ch341_port_dtr_rts</span><span class="p">(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_port</span><span class="w"> </span><span class="o">*</span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">raise</span><span class="p">)</span>
+<span class="o">+</span><span class="k">static</span><span class="w"> </span><span class="nb nb-Type">void</span><span class="w"> </span><span class="n">ch341_port_dtr_rts</span><span class="p">(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_port</span><span class="w"> </span><span class="o">*</span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">bool</span><span class="w"> </span><span class="n">raise</span><span class="p">)</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">struct</span><span class="w"> </span><span class="n">ch341</span><span class="w"> </span><span class="o">*</span><span class="n">ch341</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">container_of</span><span class="p">(</span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="n">struct</span><span class="w"> </span><span class="n">ch341</span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="p">);</span>
+<span class="w">    </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">res</span><span class="p">;</span>
+<span class="err">@@</span><span class="w"> </span><span class="o">-</span><span class="mi">637</span><span class="p">,</span><span class="mi">7</span><span class="w"> </span><span class="o">+</span><span class="mi">637</span><span class="p">,</span><span class="mi">7</span><span class="w"> </span><span class="err">@@</span>
+<span class="w">    </span><span class="n">tty_port_close</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ch341</span><span class="o">-&gt;</span><span class="n">port</span><span class="p">,</span><span class="w"> </span><span class="n">tty</span><span class="p">,</span><span class="w"> </span><span class="n">filp</span><span class="p">);</span>
+<span class="w"> </span><span class="p">}</span>
+
+<span class="o">-</span><span class="k">static</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">ch341_tty_write</span><span class="p">(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_struct</span><span class="w"> </span><span class="o">*</span><span class="n">tty</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nb">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">count</span><span class="p">)</span>
+<span class="o">+</span><span class="k">static</span><span class="w"> </span><span class="n">ssize_t</span><span class="w"> </span><span class="n">ch341_tty_write</span><span class="p">(</span><span class="n">struct</span><span class="w"> </span><span class="n">tty_struct</span><span class="w"> </span><span class="o">*</span><span class="n">tty</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nb">char</span><span class="w"> </span><span class="o">*</span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">size_t</span><span class="w"> </span><span class="n">count</span><span class="p">)</span>
+<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">struct</span><span class="w"> </span><span class="n">ch341</span><span class="w"> </span><span class="o">*</span><span class="n">ch341</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tty</span><span class="o">-&gt;</span><span class="n">driver_data</span><span class="p">;</span>
+<span class="w">    </span><span class="nb nb-Type">int</span><span class="w"> </span><span class="n">stat</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Simdi tekrar derledigimiz zaman sorunsuz bir sekilde calismasi lazim.</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">make</span>
+<span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8.11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">build</span><span class="w">  </span><span class="n">M</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Entering</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+<span class="w">  </span><span class="n">CC</span><span class="w"> </span><span class="o">[</span><span class="n">M</span><span class="o">]</span><span class="w">  </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">o</span>
+<span class="w">  </span><span class="n">MODPOST</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="k">Module</span><span class="p">.</span><span class="n">symvers</span>
+<span class="w">  </span><span class="n">CC</span><span class="w"> </span><span class="o">[</span><span class="n">M</span><span class="o">]</span><span class="w">  </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="k">mod</span><span class="p">.</span><span class="n">o</span>
+<span class="w">  </span><span class="n">LD</span><span class="w"> </span><span class="o">[</span><span class="n">M</span><span class="o">]</span><span class="w">  </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">ko</span>
+<span class="w">  </span><span class="n">BTF</span><span class="w"> </span><span class="o">[</span><span class="n">M</span><span class="o">]</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">ko</span>
+<span class="n">Skipping</span><span class="w"> </span><span class="n">BTF</span><span class="w"> </span><span class="n">generation</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">ko</span><span class="w"> </span><span class="n">due</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">unavailability</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">vmlinux</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Leaving</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+</code></pre></div>
+
+<p>Evet, Simdi modulumuzu sisteme yuklemeye gecebiliriz...</p>
+<div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">install</span>
+<span class="o">[</span><span class="n">sudo</span><span class="o">]</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nl">efek</span><span class="p">:</span>
+<span class="n">make</span><span class="w"> </span><span class="o">-</span><span class="n">C</span><span class="w"> </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8.11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">build</span><span class="w">  </span><span class="n">M</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">efek</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">CH341A</span><span class="o">-</span><span class="n">Softwares</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">LINUX</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="n">CH341SER_LINUX</span><span class="o">/</span><span class="n">driver</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Entering</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+<span class="n">make</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="n">Leaving</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="s1">&#39;/usr/src/linux-headers-6.8.11-amd64&#39;</span>
+<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8.11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">serial</span><span class="o">/</span>
+<span class="n">cp</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">ch341</span><span class="p">.</span><span class="n">ko</span><span class="w"> </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8.11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">serial</span><span class="o">/</span>
+<span class="n">depmod</span><span class="w"> </span><span class="o">-</span><span class="n">a</span>
+</code></pre></div>
+
+<p>Evet, <code>modinfo</code> ile baktigimda gorebiliyorum.</p>
+<div class="highlight"><pre><span></span><code><span class="o">$</span><span class="w"> </span><span class="n">modinfo</span><span class="w"> </span><span class="n">ch341</span>
+<span class="n">filename</span><span class="p">:</span><span class="w">       </span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">6.8</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">amd64</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">usb</span><span class="o">/</span><span class="n">serial</span><span class="o">/</span><span class="n">ch341</span><span class="o">.</span><span class="n">ko</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="nb">char</span><span class="o">-</span><span class="n">major</span><span class="o">-</span><span class="mi">169</span><span class="o">-*</span>
+<span class="n">license</span><span class="p">:</span><span class="w">        </span><span class="n">GPL</span>
+<span class="n">version</span><span class="p">:</span><span class="w">        </span><span class="n">V1</span><span class="o">.</span><span class="mi">6</span><span class="w"> </span><span class="n">On</span><span class="w"> </span><span class="mf">2022.08</span>
+<span class="n">description</span><span class="p">:</span><span class="w">    </span><span class="n">USB</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">ch340</span><span class="p">,</span><span class="w"> </span><span class="n">ch341</span><span class="p">,</span><span class="w"> </span><span class="n">etc</span><span class="o">.</span>
+<span class="n">author</span><span class="p">:</span><span class="w">         </span><span class="n">WCH</span>
+<span class="n">srcversion</span><span class="p">:</span><span class="w">     </span><span class="o">*******</span><span class="n">B1CC8</span><span class="o">***************************</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="n">usb</span><span class="p">:</span><span class="n">v</span><span class="o">****</span><span class="n">p</span><span class="o">****</span><span class="n">d</span><span class="o">*</span><span class="n">dc</span><span class="o">*</span><span class="n">dsc</span><span class="o">*</span><span class="n">dp</span><span class="o">*</span><span class="n">ic</span><span class="o">*</span><span class="n">isc</span><span class="o">*</span><span class="n">ip</span><span class="o">*</span><span class="ow">in</span><span class="o">*</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="n">usb</span><span class="p">:</span><span class="n">v</span><span class="o">****</span><span class="n">p</span><span class="o">****</span><span class="n">d</span><span class="o">*</span><span class="n">dc</span><span class="o">*</span><span class="n">dsc</span><span class="o">*</span><span class="n">dp</span><span class="o">*</span><span class="n">ic</span><span class="o">*</span><span class="n">isc</span><span class="o">*</span><span class="n">ip</span><span class="o">*</span><span class="ow">in</span><span class="o">*</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="n">usb</span><span class="p">:</span><span class="n">v</span><span class="o">****</span><span class="n">p</span><span class="o">****</span><span class="n">d</span><span class="o">*</span><span class="n">dc</span><span class="o">*</span><span class="n">dsc</span><span class="o">*</span><span class="n">dp</span><span class="o">*</span><span class="n">ic</span><span class="o">*</span><span class="n">isc</span><span class="o">*</span><span class="n">ip</span><span class="o">*</span><span class="ow">in</span><span class="o">*</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="n">usb</span><span class="p">:</span><span class="n">v</span><span class="o">****</span><span class="n">p</span><span class="o">****</span><span class="n">d</span><span class="o">*</span><span class="n">dc</span><span class="o">*</span><span class="n">dsc</span><span class="o">*</span><span class="n">dp</span><span class="o">*</span><span class="n">ic</span><span class="o">*</span><span class="n">isc</span><span class="o">*</span><span class="n">ip</span><span class="o">*</span><span class="ow">in</span><span class="o">*</span>
+<span class="n">alias</span><span class="p">:</span><span class="w">          </span><span class="n">usb</span><span class="p">:</span><span class="n">v</span><span class="o">****</span><span class="n">p</span><span class="o">****</span><span class="n">d</span><span class="o">*</span><span class="n">dc</span><span class="o">*</span><span class="n">dsc</span><span class="o">*</span><span class="n">dp</span><span class="o">*</span><span class="n">ic</span><span class="o">*</span><span class="n">isc</span><span class="o">*</span><span class="n">ip</span><span class="o">*</span><span class="ow">in</span><span class="o">*</span>
+<span class="n">depends</span><span class="p">:</span><span class="w">        </span><span class="n">usbcore</span>
+<span class="n">retpoline</span><span class="p">:</span><span class="w">      </span><span class="n">Y</span>
+<span class="n">name</span><span class="p">:</span><span class="w">           </span><span class="n">ch341</span>
+<span class="n">vermagic</span><span class="p">:</span><span class="w">       </span><span class="mf">6.8</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">amd64</span><span class="w"> </span><span class="n">SMP</span><span class="w"> </span><span class="n">preempt</span><span class="w"> </span><span class="n">mod_unload</span><span class="w"> </span><span class="n">modversions</span>
+</code></pre></div>
+
+<p>Simdi <strong>BIOS</strong> programlayiciyi <code>USB</code> ile baglayip bir test islemi yapmak kaldi.
+<a href="https://efek0349.github.io/screnshots/eeprom.jpg"><img alt="EEPROM" height="900px" src="screnshots/eeprom.jpg" width="850px"></a></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>flashrom<span class="w"> </span>--programmer<span class="w"> </span>ch341a_spi<span class="w"> </span>--read<span class="w">  </span>HP-bios.bin
+flashrom<span class="w"> </span>unknown<span class="w"> </span>on<span class="w"> </span>Linux<span class="w"> </span><span class="m">6</span>.8.11-amd64<span class="w"> </span><span class="o">(</span>x86_64<span class="o">)</span>
+flashrom<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software,<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span><span class="nb">source</span><span class="w"> </span>code<span class="w"> </span>at<span class="w"> </span>https://flashrom.org
+
+Using<span class="w"> </span>clock_gettime<span class="w"> </span><span class="k">for</span><span class="w"> </span>delay<span class="w"> </span>loops<span class="w"> </span><span class="o">(</span>clk_id:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>resolution:<span class="w"> </span>1ns<span class="o">)</span>.
+Found<span class="w"> </span>Winbond<span class="w"> </span>flash<span class="w"> </span>chip<span class="w"> </span><span class="s2">&quot;W25X40&quot;</span><span class="w"> </span><span class="o">(</span><span class="m">512</span><span class="w"> </span>kB,<span class="w"> </span>SPI<span class="o">)</span><span class="w"> </span>on<span class="w"> </span>ch341a_spi.
+<span class="o">===</span>
+This<span class="w"> </span>flash<span class="w"> </span>part<span class="w"> </span>has<span class="w"> </span>status<span class="w"> </span>UNTESTED<span class="w"> </span><span class="k">for</span><span class="w"> </span>operations:<span class="w"> </span>WP
+The<span class="w"> </span><span class="nb">test</span><span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>chip<span class="w"> </span>may<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>updated<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development
+version<span class="w"> </span>of<span class="w"> </span>flashrom.<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>running<span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development<span class="w"> </span>version,
+please<span class="w"> </span>email<span class="w"> </span>a<span class="w"> </span>report<span class="w"> </span>to<span class="w"> </span>flashrom@flashrom.org<span class="w"> </span><span class="k">if</span><span class="w"> </span>any<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>above<span class="w"> </span>operations
+work<span class="w"> </span>correctly<span class="w"> </span><span class="k">for</span><span class="w"> </span>you<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>flash<span class="w"> </span>chip.<span class="w"> </span>Please<span class="w"> </span>include<span class="w"> </span>the<span class="w"> </span>flashrom<span class="w"> </span>log
+file<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>operations<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>the<span class="w"> </span>man<span class="w"> </span>page<span class="w"> </span><span class="k">for</span><span class="w"> </span>details<span class="o">)</span>,<span class="w"> </span>and<span class="w"> </span>mention
+which<span class="w"> </span>mainboard<span class="w"> </span>or<span class="w"> </span>programmer<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>subject<span class="w"> </span>line.
+Thanks<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>help!
+Reading<span class="w"> </span>flash...<span class="w"> </span><span class="k">done</span>.
+</code></pre></div>
+
+<p>Sorunsuz bir sekilde okuma islemini tamamladi.
+Simdi bir de dogrulama islemi yapalim.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>flashrom<span class="w"> </span>--programmer<span class="w"> </span>ch341a_spi<span class="w"> </span>--verify<span class="w">  </span>HP-bios.bin
+flashrom<span class="w"> </span>unknown<span class="w"> </span>on<span class="w"> </span>Linux<span class="w"> </span><span class="m">6</span>.8.11-amd64<span class="w"> </span><span class="o">(</span>x86_64<span class="o">)</span>
+flashrom<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software,<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span><span class="nb">source</span><span class="w"> </span>code<span class="w"> </span>at<span class="w"> </span>https://flashrom.org
+
+Using<span class="w"> </span>clock_gettime<span class="w"> </span><span class="k">for</span><span class="w"> </span>delay<span class="w"> </span>loops<span class="w"> </span><span class="o">(</span>clk_id:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>resolution:<span class="w"> </span>1ns<span class="o">)</span>.
+Found<span class="w"> </span>Winbond<span class="w"> </span>flash<span class="w"> </span>chip<span class="w"> </span><span class="s2">&quot;W25X40&quot;</span><span class="w"> </span><span class="o">(</span><span class="m">512</span><span class="w"> </span>kB,<span class="w"> </span>SPI<span class="o">)</span><span class="w"> </span>on<span class="w"> </span>ch341a_spi.
+<span class="o">===</span>
+This<span class="w"> </span>flash<span class="w"> </span>part<span class="w"> </span>has<span class="w"> </span>status<span class="w"> </span>UNTESTED<span class="w"> </span><span class="k">for</span><span class="w"> </span>operations:<span class="w"> </span>WP
+The<span class="w"> </span><span class="nb">test</span><span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>chip<span class="w"> </span>may<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>updated<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development
+version<span class="w"> </span>of<span class="w"> </span>flashrom.<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>running<span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development<span class="w"> </span>version,
+please<span class="w"> </span>email<span class="w"> </span>a<span class="w"> </span>report<span class="w"> </span>to<span class="w"> </span>flashrom@flashrom.org<span class="w"> </span><span class="k">if</span><span class="w"> </span>any<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>above<span class="w"> </span>operations
+work<span class="w"> </span>correctly<span class="w"> </span><span class="k">for</span><span class="w"> </span>you<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>flash<span class="w"> </span>chip.<span class="w"> </span>Please<span class="w"> </span>include<span class="w"> </span>the<span class="w"> </span>flashrom<span class="w"> </span>log
+file<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>operations<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>the<span class="w"> </span>man<span class="w"> </span>page<span class="w"> </span><span class="k">for</span><span class="w"> </span>details<span class="o">)</span>,<span class="w"> </span>and<span class="w"> </span>mention
+which<span class="w"> </span>mainboard<span class="w"> </span>or<span class="w"> </span>programmer<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>subject<span class="w"> </span>line.
+Thanks<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>help!
+Verifying<span class="w"> </span>flash...<span class="w"> </span>VERIFIED.
+</code></pre></div>
+
+<p>Sorunsuz bir sekilde onuda tamamladi.
+Bir son olarak yazma islemi yapalim.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>flashrom<span class="w"> </span>--programmer<span class="w"> </span>ch341a_spi<span class="w"> </span>--write<span class="w">  </span>HP-bios.bin
+flashrom<span class="w"> </span>unknown<span class="w"> </span>on<span class="w"> </span>Linux<span class="w"> </span><span class="m">6</span>.8.11-amd64<span class="w"> </span><span class="o">(</span>x86_64<span class="o">)</span>
+flashrom<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software,<span class="w"> </span>get<span class="w"> </span>the<span class="w"> </span><span class="nb">source</span><span class="w"> </span>code<span class="w"> </span>at<span class="w"> </span>https://flashrom.org
+
+Using<span class="w"> </span>clock_gettime<span class="w"> </span><span class="k">for</span><span class="w"> </span>delay<span class="w"> </span>loops<span class="w"> </span><span class="o">(</span>clk_id:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span>resolution:<span class="w"> </span>1ns<span class="o">)</span>.
+Found<span class="w"> </span>Winbond<span class="w"> </span>flash<span class="w"> </span>chip<span class="w"> </span><span class="s2">&quot;W25X40&quot;</span><span class="w"> </span><span class="o">(</span><span class="m">512</span><span class="w"> </span>kB,<span class="w"> </span>SPI<span class="o">)</span><span class="w"> </span>on<span class="w"> </span>ch341a_spi.
+<span class="o">===</span>
+This<span class="w"> </span>flash<span class="w"> </span>part<span class="w"> </span>has<span class="w"> </span>status<span class="w"> </span>UNTESTED<span class="w"> </span><span class="k">for</span><span class="w"> </span>operations:<span class="w"> </span>WP
+The<span class="w"> </span><span class="nb">test</span><span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>this<span class="w"> </span>chip<span class="w"> </span>may<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>updated<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development
+version<span class="w"> </span>of<span class="w"> </span>flashrom.<span class="w"> </span>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>running<span class="w"> </span>the<span class="w"> </span>latest<span class="w"> </span>development<span class="w"> </span>version,
+please<span class="w"> </span>email<span class="w"> </span>a<span class="w"> </span>report<span class="w"> </span>to<span class="w"> </span>flashrom@flashrom.org<span class="w"> </span><span class="k">if</span><span class="w"> </span>any<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>above<span class="w"> </span>operations
+work<span class="w"> </span>correctly<span class="w"> </span><span class="k">for</span><span class="w"> </span>you<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>flash<span class="w"> </span>chip.<span class="w"> </span>Please<span class="w"> </span>include<span class="w"> </span>the<span class="w"> </span>flashrom<span class="w"> </span>log
+file<span class="w"> </span><span class="k">for</span><span class="w"> </span>all<span class="w"> </span>operations<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="o">(</span>see<span class="w"> </span>the<span class="w"> </span>man<span class="w"> </span>page<span class="w"> </span><span class="k">for</span><span class="w"> </span>details<span class="o">)</span>,<span class="w"> </span>and<span class="w"> </span>mention
+which<span class="w"> </span>mainboard<span class="w"> </span>or<span class="w"> </span>programmer<span class="w"> </span>you<span class="w"> </span>tested<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>subject<span class="w"> </span>line.
+Thanks<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>help!
+Reading<span class="w"> </span>old<span class="w"> </span>flash<span class="w"> </span>chip<span class="w"> </span>contents...<span class="w"> </span><span class="k">done</span>.
+Erasing<span class="w"> </span>and<span class="w"> </span>writing<span class="w"> </span>flash<span class="w"> </span>chip...
+Warning:<span class="w"> </span>Chip<span class="w"> </span>content<span class="w"> </span>is<span class="w"> </span>identical<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>requested<span class="w"> </span>image.
+Erase/write<span class="w"> </span><span class="k">done</span>.
+</code></pre></div>
+
+<p>Hex editor ile soyle bir goz atalim.</p>
+<p>```
+$ hexedit HP-bios.bin
+00000000   FF FF FF FF  FF FF FF FF  FF FF FF FF  08 F8 00 00  E8 0F 6C 88  08 00 81 E7  08 F8 11 90  ..................l.........
+0000001C   00 00 00 00  01 00 00 00  17 00 00 00  05 20 21 04  34 0F 00 00  46 61 BD 2C  01 00 00 00  ............. !.4...Fa.,....
+00000038   1D 00 00 00  D0 1B 00 00  00 1C 00 00  00 00 00 00  00 00 00 00  00 00 00 00  7A 32 BF 9F  ........................z2..
+00000054   51 B4 41 2B  59 9C AF 9F  E4 B8 62 6B  1B BF A4 28  00 02 A9 68  17 6A D1 76  19 FC 0D B9  Q.A+Y.....bk...(...h.j.v....
+00000070   21 35 A5 3C  FC 66 46 A0  35 D0 5A 04  1B 2E FB 26  29 12 FB A4  E8 F3 E4 07  EA 61 44 C9  !5.&lt;.fF.5.Z....&amp;)........aD.
+0000008C   AB 3E 1A 7C  4C 99 43 7A  C4 8B BB C7  9A 69 35 7E  A0 F2 6F F7  2A AD 13 31  BB AB 89 DF  .&gt;.|L.Cz.....i5~..o.<em>..1....
+000000A8   C9 DA 46 A8  67 DD 78 88  68 BF 2F 4F  F3 29 26 8A  5C DE CD 19  AC D3 F5 33  10 05 CC 89  ..F.g.x.h./O.)&amp;.......3....
+000000C4   7C B5 39 69  1F E2 0C 1D  75 C9 D8 CB  7A BC 99 83  9C BC 40 33  3C B3 E5 2A  55 6D 3F 48  |.9i....u...z.....@3&lt;..</em>Um?H
+000000E0   75 35 C2 A5  6E 5B D8 0C  9C 5A 6E C4  BC 04 12 B3  A5 96 5A CB  FA D1 24 6A  AF 9D B0 C1  u5..n[...Zn.......Z...$j....
+000000FC   D8 6B 97 65  C5 82 73 62  84 98 D9 31  18 04 76 CD  9F 81 85 AB  0A 40 4E CD  DB B7 54 E7  .k.e..sb...1..v......@N...T.
+00000118   B2 A0 DC BF  CE BA B4 6F  DC AF BA 7C  8C E2 DB DE  6B 85 F4 0F  27 7E 00 D2  0C FD FD 34  .......o...|....k...'~.....4
+00000134   ED 8A 4B 7D  07 C4 25 C7  96 7B 9F 55  EC 44 99 CD  A0 89 D1 04  1E 3E F5 05  6C 44 17 4D  ..K}..%..{.U.D.......&gt;..lD.M
+00000150   CE F6 86 00  3E 41 9A A5  A9 A7 99 06  EA 71 87 CB  22 0F C8 8D  17 5B 75 7D  52 5C 4D 12  ....&gt;A.......q.."....[u}R\M.
+0000016C   EF 07 00 F3  40 F8 BC BD  10 11 3D C3  9D CC 21 A9  9A 34 C9 3B  1F 8E 2C 48  A2 45 75 44  ....@.....=...!..4.;..,H.EuD
+00000188   6F 95 3E A8  AE 40 C2 7E  AF 2D 23 B0  3F 49 B4 1E  3A E0 FA 74  7A 24 55 22  81 8D 98 14  o.&gt;..@.~.-#.?I..:..tz$U"....
+000001A4   99 B6 53 CF  FC 4F DB BC  2E 0D 6B C9  A5 6E AB 77  9C 8A 24 C4  42 47 1B 17  76 48 1B 32  ..S..O....k..n.w..$.BG..vH.2
+000001C0   51 5F 07 6E  B6 70 97 D0  CE 4B F7 44  C0 37 32 1B  49 C9 AB 81  40 A0 7B 8E  74 29 45 3F  Q_.n.p...K.D.72.I...@.{.t)E?
+000001DC   0E E7 A1 C7  A3 7E 8A 2C  24 20 DE 75  34 0E 53 21  EB 09 CD 95  1D 33 7E 6E  A8 C8 90 84  .....~.,$ .u4.S!.....3~n....
+000001F8   83 25 3E 3A  1F 70 E1 EA  C1 E0 3A 3A  C9 3A C4 B9  B3 B7 47 08  CA CB 40 22  E3 DD E7 66  .%&gt;:.p....::.:....G...@"...f
+00000214   6E 05 4B BD  88 AF 7B E1  0D B8 8C C4  18 AD AD CA  17 25 63 9F  99 13 85 A6  16 1E 2F 48  n.K...{..........%c......./H
+00000230   0E 39 B7 BD  63 AB 66 B8  A9 ED 6E 3A  DD FD 39 9B  1B B3 08 93  17 DE 77 6A  6E 89 11 15  .9..c.f...n:..9.......wjn...
+0000024C   CA 32 44 BB  AD 1F C8 64  F6 F2 31 50  67 DC E5 48  9D 46 5B 92  40 39 3F F7  0C 86 6E A0  .2D....d..1Pg..H.F[.@9?...n.
+00000268   5B 34 74 D0  19 7A 5D E4  78 6E 7B F6  E0 F2 69 A1  03 62 69 B5  BE 54 9C 8E  F8 D9 BA BA  [4t..z].xn{...i..bi..T......
+00000284   BB 5A A2 DF  83 63 B1 E7  4E 74 77 13  92 E1 3A 0C  D9 10 7E CC  BA DB C5 4D  39 05 66 88  .Z...c..Ntw...:...~....M9.f.
+000002A0   F2 22 A8 0D  F4 62 AE 11  3F CD 9A F1  C1 F4 62 AB  5F A5 D9 6E  36 02 3E EC  14 D6 9F 04  ."...b..?.....b._..n6.&gt;.....
+000002BC   E9 4E 5C BC  63 B0 F5 3E  6F A4 6C 34  FC 5D 78 51  D0 92 16 71  8E 87 A0 E5  70 37 16 48  .N.c..&gt;o.l4.]xQ...q....p7.H
+000002D8   08 A8 46 68  1B DC 48 65  19 A6 76 E1  DE 6F B3 6A  2C F4 8A BC  FE 6F 3E C4  53 93 F4 5B  ..Fh..He..v..o.j,....o&gt;.S..[
+000002F4   BC AD 86 19  DB E6 89 39  71 3F 0F 6E  F9 1F 99 63  52 BC 1D 42  1D 2C 17 0A  49 1B 20 F9  .......9q?.n...cR..B.,..I. .
+00000310   42 DF 64 C8  1E 21 17 A7  7C 02 7B BD  8A 48 7B C3  9F 15 40 1B  29 6E B5 82  23 A9 45 70  B.d..!..|.{..H{...@.)n..#.Ep
+0000032C   95 5F 63 A9  02 29 44 6E  46 39 5D D0  8A 6C EF 18  61 13 30 53  21 3B 09 98  08 E0 87 69  ._c..)DnF9]..l..a.0S!;.....i
+00000348   98 91 75 BD  A3 A7 35 83  31 7E A0 E4  56 32 9B 82  5D 4F D1 86  B0 36 32 37  A2 03 16 EE  ..u...5.1~..V2..]O...627....
+---  HP-bios.bin       --0x0/0x80000--0%------------------------------------------------------------------------------------------
+````</p>
+<p>Evet, Artik <code>linux</code> uzerinde sorunsuz bir sekilde <strong>bios</strong> programlayabiliriz...</p>
+                </div><!-- /.entry-content -->
+        </article>
+</section>
+        </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
+    <li><a href="https://github.com/efek0349/e480-opencore"><i class="icon-external-link"></i>MacOS-e480 opencore</a></li>
+    <li><a href="https://github.com/efek0349/dotfiles"><i class="icon-external-link"></i>dotfiles</a></li>
+    <li><a href="https://github.com/efek0349/obsd-progs"><i class="icon-external-link"></i>obsd-ports</a></li>
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="https://t.me/efek0349"><i class="icon-telegram-sign icon-large"></i>telegram</a></li>
+    <li><a href="https://twitter.com/efek0349"><i class="icon-X-sign icon-large"></i>X</a></li>
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="/category/hello.html">
+    <i class="icon-folder-open icon-large"></i>hello
+</a>
+</li>
+<li>
+<a href="/category/kali.html">
+    <i class="icon-folder-open icon-large"></i>Kali
+</a>
+</li>
+<li>
+<a href="/category/openbsd.html">
+    <i class="icon-folder-open icon-large"></i>OpenBSD
+</a>
+</li>
+<li>
+<a href="/category/xiaomi.html">
+    <i class="icon-folder-open icon-large"></i>Xiaomi
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+					Email: kndmrefe@gmail.com GPG: 0xC9E85BA0E9E1BACE
+        </address><!-- /#about -->
+
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
+  </body>
+</html>
