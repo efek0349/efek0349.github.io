@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Redmi 9A Direncsiz imei degistirme!</title>
+    <title>IMEI Yenileme Rehberi!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="efek0349">
@@ -105,8 +105,8 @@
                         <h1>
                                 <a href=""
                                         rel="bookmark"
-                                        title="Permalink to Redmi 9A Direncsiz imei degistirme!">
-                                        Redmi 9A Direncsiz imei degistirme!
+                                        title="Permalink to IMEI Yenileme Rehberi!">
+                                        IMEI Yenileme Rehberi!
                                 </a>
                         </h1>
                 </header>
@@ -128,99 +128,82 @@
 	<a href="/tag/mtk.html"><i class="icon-tag"></i>MTK</a>
 	<a href="/tag/repair-mac.html"><i class="icon-tag"></i>Repair MAC</a>
 </footer><!-- /.post-info -->                </div>
-                <p>Aslinda bu yaziyi, Redmi 9A icin degil de! Redmi note 11 pro icin yazacaktim
-ama onun icin hazirlayamadim. Daha dogrusu zaman bulamadim. Kismet 9A icinmis.
-Gelilim konumuza, Imei yenileme islemine. Elime bir yurt disi telefonu gecti.
-Herkesin bildigi gibi, imei islemi yapilmasi lazim. Fiyatlarini sormayin bu
-siralar hersey cok pahali...:) Ben de bu konularda tecrubem oldugu icin. Kendi
-isimi kendim yapmaya karar verdim. Daha once hic bu islerimi yapmadim. Bir diger
-telefonum haric...:) Ise Arastirma islemi ile basladim. Hangi yazilimlar vs diye.
-Karsima hep DFTPro diye birseyler cikti. Fiyatlarini sormayin surekli bu isleri
-yapan biri olmadigim icin almaya gerek yoktu ama yune de baktim. (85$ = 2794 tl'ydi
-en son bu saatlerde!) Ben genelde Elektronik tamiri ve yazimla ilgileniyorum ama
-imei isleri hic yapmadim. Daha dogrusu bir suc oldugu icin ama bazi durumlarda
-custom rom kurulumlarinda veya herhangi bir yazilim sorunlarinda imei yenileme
-islemleri yapilmasi gerekiyor. Telefon tamircilerine gidip, imei atiyormusunuz
-diye sorarsaniz, Cevap yapmiyoruz. Onun yerine su kelimeyi kullanin. Direncli imei
-yenileme islemi yaptirmak istiyorum. :) Bu sekilde yaptirma ihtimaliniz daha da
-yukselir. :) Imei degistirmek suc ama imei yenilemek yasal... :)</p>
-<p>Simdi gelelim ne yapacagimiza. Oncelikle ENG rom nedir onu ogrenelim!</p>
-<blockquote>
-<p>ENG rom (Engineering ROM), bir cihazın geliştirme ve test aşamalarında kullanılan
-özel bir yazılım sürümüdür. Bu ROM, genellikle cihazın donanım ve yazılım bileşenlerinin
-düzgün çalışıp çalışmadığını test etmek amacıyla mühendisler ve geliştiriciler tarafından
-kullanılır. ENG ROM'lar, son kullanıcıların erişimine açık olmayan, hataları ve
-eksiklikleri barındırabilecek erken sürümler olabilir. Bu nedenle, son kullanıcıların
-cihazlarına bu tür ROM'ları yüklemeleri genellikle önerilmez.</p>
-</blockquote>
-<p>Evet kisaca ENG romu ogrendik. En azindan neden bu rom'u yuklemeye calistigimizi anlayalim.
-Gerci yuklemeye gerek kalmadi. Ne yaptiysam rom'u calistiramadim. Baska bir yol bulmam
-gerekti. Kendi sitesinden ENG rom'u indiremedim. Sunucularinda yok sanirim dosya. Internette
-hemen hemen ucretsiz silerde dagitilan 'ENG' romlari denedim ama hicbiri benim telefonda
-calismadi. Andorid 11 uzerinde islemler yapmaya calistim ama sorunlar coktu. Imkan vermedi
-imei degistirmeye.Bir suru yontem denedim ama sonu kotu bitti hep. Ya boot ekraninda kaldi,
-ya da hic tepki vermedi. Acilmayi birakti tepki bile vermedi. Sanki bitkisel hayata girmis
-gibi bir durumdaydi.</p>
-<p>O yuzden Android 10 surumune dusurmaye karar verdim. Bu bana biraz avantaj kazandirir dusuncesi
-ile basladim android 10 rom aramaya. Kendi sitesinden indirdigim bazi romlar ile sorun yasadim.
-Enson TR ve RU(rus) romlari basari ile yukleyebildim. Enson Tr romunda karar verdim ve Tr
-romunu yukledim.(V12.0.7.0.QCDTRXM)</p>
-<p>Bu islemlere baslamadan once suruculeri yuklemek gerekiyor. Bunun icin TFT driver installler v2'yi
-kullaniyorum. Ek olarak baska birsey gerekiyor mu emin olamadigim icin yazmiyorum ama siz ek olarak.
-UsbDk-x64 sistemize gore x86 da olabilir. MTK Driver v5.2307 var Mediatek Driver Auto Installer
-de var. Bunlari kurabilirsiniz. ModemMETA icin de var CDN,VCOM ve Universal ADB driver. Sanirim
-bunlar gerekli olan suruculer.</p>
-<p>Yukleme islemi basit. SP Flash Tool yazilimi indiriyorsunuz ve zip den cikarip Cift tik ile
-calistiriyorusunuz cok basit. Linux versiyonu bile bulunmakta ama ben daha kullanmadim. Tabi
-Yukleme islemi oyle degil. Android telefonlar bu tur girisimleri engelemek icin bootloader
-kilidi dedigimiz bir olay var. Bu kilidi acmadan herhangi bir islem yapmak neredeyse imkansiz...
-Internette birkac arastirma yaptigim zaman bazi araclara ulastim. Benim isime hangisi yarar
-diye baktim. Onceligim islemcimi tanimakti. Benim telefonumum islemcisi MediaTek Helio G25(MT6765).
-Neyse ki bu islemcilerin bootloader kilidini acmak kolay. Redmi note 11 pro da kullandigim yazilim
-bile is goruyor. MediaTekBootloaderUnlock diye arastirdiginiz zaman bircok yerde bulabilirsiniz.
-Zaten Python dilinde yazilmis bir yazilim. 11 pro da kilidi acmaya yaramisti diyerek onunla actim
-ama gerek yokmus sonra ogrendigim kadari ile bypass yapan bir tool yapmislar zaten. Biraz arama ile
-kendisine ulastim. Ismi MTK_bypass_rev4.exe. Acilinca 'BYPASS' kismina tikliyoruz ve artik bekliyor
-telefonunun usb baglantisini. Otomatiktran olarak bypass yapiyor ve kapatmiyoruz artik bu yazilimi.
-Arka planda calismaya devam edicek sekilde birakiyoruz. Telefonu USB ile baglamadan once ses acma
-ve kisma tuslarina ayni anda basili tutup usb kablosunu telefona takiyoruz ve bypass islemine
-basliyor. Simdi SP Flash Tool ile Rom yukleme gecebiliriz. Flash tool da Scatter-loading file bolumu
-var. Orad choose kismina tikladigimizda dosya yoneticisinden, rom dosyalarini arsivden cikardigimiz
-yere gidip MTK6765_Android_scatter.txt dosyasini seciyoruz ve programa yukluyoruz. Download -Agent
-kismi bende otomatik secili geldi ama gelmeyenler Flash toolun kendi icinde MTK_AllnOne_DA.bin
-dosyasini secebilir. Ben farkl bir dosya kullanmadim. Bazi durumlar oldu kullanmam icin ama siz
-umarim o duruma dusmezsiniz. Kurtarmak icin bazi yazilimsal ve donanimsal mudahaleye girdim cunku.
-Bunlar hazirlandiktan sonra sira geldi artik telefona yuklemeye. Bu asamayi su sekilde yapmak ben
-de sorun yaratmadi. ilk once telefonu tamamen kapatiyoruz ve pc baglantisi yapmiyoruz. Siralama su
-sekilde. Mtk bypass yazilimini calistir ve BYPASS kismina tikla. Sonra telefonun ses acma ve kisma
-tuslarina ayni anda basili tutup, USB kablosunu telefona takmak. MTK bypass yazilimi otomatik sekilde
-bypass islemine gececektir. Sorunsuz bir sekilde bypass oldugunu gordugunuz zaman SP Flash Tool
-yazilimini calistiralim. Zaten ilk acip ayarladigimiz sekilde kayitli kaliyor ve bize sadece Download
-ikonuna tiklamak kaliyor ve herhangi bir sorun cikmazsa sorunsuz bir sekilde rom yukleme birince
-zaten bir uyari ekrani cikacaktir. Telefonun USB kablosunu cikarip telefonu aciyoruz. Bu asamayida
-sorunsuz bir sekilde gecip telefon acip tekrar kapatiyoruz. NVDATA dosyasini telefondan silme islemine
-geciyoruz. Zira bunu yapmadigimiz zaman ne kadar imei atarsak atalim. Her basladiginda telefon eskiye
-donuz yapacaktir. Imeileri sistemde goremeyecegiz. Bunun icin yine ucretsiz bir arac buulunmakta. Ismi
-TFTUnlock Tool. Kisa bir google dork ile ulasabilirsiniz. Bunda da ayni islem. Erase NVDATA kismini
-seciyoruz ve siliyoruz. Sorunsuz bir islem yaptigimiz zaman diger bir araca geciyoruz. Ismi MauiMETA
-ver10 bu arac bize imei atmamiza yarayacak bir arac. Rom yukleme islemindeki gibi yapiyoruz bunda da.
-Bypass aracini calisitir. BYPASS kismina tikla ve MauiMETA aracini calistir ve connect kismina tikla.
-Her iki aracta telefonun bilgisayar baglantisini beklemekte. Sira telefonun bilgisayar baglantisina
-geldi. Ses acma ve kisma tularina basili tutup, USB kablosunu bagliyoruz telefona ve Bingoo. MauiMETA
-telefonumuza baglanmaya calisiyor. Hersey yolunda gider. Connectted diyecek bize. Sonra MauiMETA da
-Load DB kismina tikliyoruz ve From target'i seciyoruz. Sonra Search Tools arama bolumune tikliyoruz
-ve IMEI Download diyoruz. Artik imei degistirme ekranina gelmis oluyoruz. READ kismi ile imei
-okutabiliriz ama biz direk WRITE ile isimiz. Bosluklara 15 haneli imei yaziyoruz. Sim1 varsas sim2
-icinde ve WRITE diyoruz. Eger sorunsuz bir islem yaptiysak bize basarili bir sekilde islem tamamlandigini
-soyleyecek. 2 simkartli bir telefon ise direk sim2 ye atin. Sorunsuz telefonda calisacaktir. Ekrani
-kapatip Disconnect diyoruz ve telefonuz USB baglantisini cikarip acma tusuna uzun bir sure basili tutup
-acilmasini sagliyoruz. Sistem sorunsuz bir sekilde acilirsa '*#06#' ile imei numaralarimizi kontrol
-ediyoruz.Bu sekilde ben sorunsuz olarak islemleri yaptim ve simkart taktigim zaman da kontrollerde
-bir sorun goremedim. Ilerleyen zamanlar sorun olursa yaziyi guncelemeyi dusunuyorum. Bazi durumlarda
-sebeke sorunlari falan yasama durumlari olabiliyor. Yaziyi uzatmamak adina boyle tamamliyorum. Yapilan
-islemeri ve sorunlarin hepsini yazmaya calisirsam, cok cok uzun bir yazi olacak ama bu isler ucretli
-yazlimlar ile tabiki daha basit bir sekilde yapilabiliyor....</p>
-<p>Not=1 haftalik kullanimda herhangi bir sorun yasanmadi!</p>
+                <h1>IMEI Yenileme Rehberi</h1>
+<p>Elime bir yurt disi telefonu gecti ve bu telefonun IMEI numarasini yenilemem
+gerekti. IMEI degistirmek suc olmasina ragmen, IMEI yenilemek bazi durumlarda
+yasal olabilir. Ozellikle custom ROM kurulumlari veya yazilim sorunlari
+nedeniyle IMEI yenileme islemi yapilmasi gerekebilir.</p>
+<h2>ENG ROM Nedir?</h2>
+<p><strong>ENG ROM (Engineering ROM)</strong>, bir cihazin gelistirme ve test asamalarinda
+kullanilan ozel bir yazilim surumudur. Genellikle muhendisler ve
+gelistiriciler tarafindan, cihazin donanim ve yazilim bilesenlerinin duzgun
+calisip calismadigini test etmek amaciyla kullanilir. ENG ROM'lar genellikle
+son kullanicilarin erisimine acik olmayan, hatalari ve eksiklikleri
+barindirebilecek erken surumler olabilir. Bu nedenle, son kullanicilarin bu
+tur ROM'lari cihazlarina yuklemeleri onerilmez.</p>
+<h2>Sorunlar ve cozumler</h2>
+<p><strong>ENG ROM</strong> ile ilgili bazi sorunlar yasadim. Kendi sitesinden ENG ROM'u
+indiremedim ve internet uzerindeki ucretsiz ENG ROM'lar da telefonumda
+calismadi. Android 11 uzerinde yapilan islemler basarisiz oldu ve telefon ya
+boot ekraninda kaldi ya da hic tepki vermedi.</p>
+<p>Bu yuzden, Android 10 surumune dusurmeye karar verdim. Android 10 ROM'lari
+aramaya basladim ve sonunda Turkiye ve Rusya (RU) ROM'larini buldum. Basariyla
+yukledigim TR ROM'u (V12.0.7.0.QCDTRXM) tercih ettim.</p>
+<h2>Gerekli Suruculer</h2>
+<p>IMEI yenileme islemi yapmadan once, bazi suruculerin yuklenmis olmasi
+gerekiyor:</p>
+<ul>
+<li><strong>TFT Driver Installer v2</strong></li>
+<li><strong>USB Dk-x64</strong> (veya x86)</li>
+<li><strong>MTK Driver v5.2307</strong> ve <strong>Mediatek Driver Auto Installer</strong></li>
+<li><strong>ModemMETA</strong> icin CDN, VCOM ve Universal ADB driver</li>
+</ul>
+<h2>ROM Yukleme Adimlari</h2>
+<ol>
+<li><strong>SP Flash Tool</strong> yazilimini indirip zip dosyasindan cikarin ve calistirin.
+    Linux versiyonu da mevcuttur, ancak ben kullanmadim.</li>
+<li><strong>Bootloader Kilidi</strong>: Telefonlarda bu tur islemleri engelleyen bir
+    bootloader kilidi bulunur. MediaTek Helio G25 (MT6765) islemcili
+    telefonlarda bootloader kilidini acmak genellikle kolaydir.
+    "MediaTekBootloaderUnlock" araci ile bunu yapabilirsiniz. Ayrica,
+    MTK_bypass_rev4.exe gibi bypass araclari da kullanilabilir.</li>
+<li><strong>SP Flash Tool</strong>'u acarak, "Scatter-loading file" bolumunde
+    MTK6765_Android_scatter.txt dosyasini secin.</li>
+<li>"Download-Agent" kisminda, genellikle otomatik secili olan
+    <strong>MTK_AllnOne_DA.bin</strong> dosyasini kullanin.</li>
+<li>Telefonu tamamen kapatin ve USB baglantisini yapmadan once MTK
+    bypass yazilimini calistirarak bypass islemini baslatin.</li>
+<li>Telefonu ses acma ve kisma tuslarina ayni anda basili
+    tutarak USB kablosunu baglayin. Bypass islemi otomatik
+    olarak baslayacaktir.</li>
+<li><strong>SP Flash Tool</strong>'da "Download" ikonuna tiklayarak ROM
+    yuklemesini baslatin. Yukleme tamamlandiginda, telefonu
+    USB kablosundan cikarin ve acin.</li>
+</ol>
+<h2>NVDATA Dosyasini Silme</h2>
+<ol>
+<li><strong>TFTUnlock Tool</strong> kullanarak NVDATA dosyasini silin. Bu islem, telefonun
+    eski IMEI numarasini hatirlamasini saglar.</li>
+<li><strong>MauiMETA</strong> araci ile IMEI numarasini yazin. "Load DB" kismina tiklayin
+    ve "From target" seceneğini belirleyin. Ardindan "Search Tools"
+    bolumunden "IMEI Download" seceneğine tiklayin.</li>
+</ol>
+<h2>IMEI Yazma</h2>
+<ol>
+<li>MauiMETA araci ile IMEI numarasini yazin. SIM1 ve SIM2 icin gerekli IMEI
+    numaralarini girin.</li>
+<li>"WRITE" seceneğine tiklayin ve islemi tamamlayin.</li>
+<li>Telefonun USB baglantisini cikarin, acma tusuna uzun sure basili tutarak
+    acin ve *#06# ile IMEI numaralarinizi kontrol edin.</li>
+</ol>
+<h2>Notlar</h2>
+<ol>
+<li>1 haftalik kullanimdan sonra herhangi bir sorun yasamadi. Eğer ilerleyen
+   zamanlarda sorun yasarsam, yaziyi guncellemeyi dusunuyorum.</li>
+</ol>
+<p><strong>Not</strong>: IMEI degistirmek suc olabilmektedir, ancak IMEI yenileme islemleri
+   bazi durumlarda yasal olabilir. Uygulamalarinizi ve islemlerinizi buna gore
+   yapmalisiniz.</p>
                 </div><!-- /.entry-content -->
         </article>
 </section>
