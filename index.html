@@ -1,175 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="tr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="color-scheme" content="light dark" />
 
-    <!-- ================= GOOGLE OAUTH FIX ================= -->
+    <!-- Android için özel meta etiketleri -->
+    <meta name="android-app-capable" content="yes" />
+    <meta name="android-statusbar-color" content="#3B82F6" />
+
+    <meta name="description" content="Mesai Takip - Fazla mesai saatlerinizi, izinlerinizi ve maaşınızı kolayca takip edin. Verilerinizi Google Drive ile güvenle yedekleyin." />
     <title>Mesai Takip</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dark Mode Initial State Script -->
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+          
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000000');
+            document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', '#3B82F6');
+            document.querySelector('meta[name="color-scheme"]').setAttribute('content', 'light');
+          }
+        } catch (e) {}
+      })();
+    </script>
 
-    <meta name="description" content="Mesai Takip is a web application for tracking working hours and overtime. Developed by efek0349.">
-
-    <meta name="author" content="efek0349">
-
-    <meta name="application-name" content="Mesai Takip">
-
-    <meta property="og:title" content="Mesai Takip">
-    <meta property="og:description" content="Track working hours and overtime easily.">
-    <meta property="og:type" content="website">
-    <!-- ==================================================== -->
-
-    <!-- Le styles -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.dark.css" type="text/css" />
-
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
+    <style>
+      :root { --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px); }
+      html { background-color: #f3f4f6; }
+      html.dark { background-color: #000000; }
+      @supports (-webkit-touch-callout: none) { .ios-fix { height: -webkit-fill-available; } }
+      
+      /* Botlar için açıklama stili - Kullanıcıdan tamamen gizle ama DOM'da bırak */
+      .app-info-bot {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
       }
-
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-
-      .tag-1 { font-size: 13pt; }
-      .tag-2 { font-size: 10pt; }
-      .tag-3 { font-size: 8pt; }
-      .tag-4 { font-size: 6pt; }
     </style>
-
-    <link href="/theme/css/bootstrap-responsive.dark.css" rel="stylesheet">
-    <link href="/theme/css/font-awesome.css" rel="stylesheet">
-    <link href="/theme/css/pygments.css" rel="stylesheet">
-
   </head>
-
   <body>
-
-    <!-- NAVBAR -->
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-
-          <a class="brand" href="/index.html">Mesai Takip</a>
-
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="divider-vertical"></li>
-
-              <li><a href="/category/hello.html">hello</a></li>
-              <li><a href="/category/kali.html">Kali</a></li>
-              <li><a href="/category/openbsd.html">OpenBSD</a></li>
-              <li><a href="/category/xiaomi.html">Xiaomi</a></li>
-
-              <ul class="nav pull-right">
-                <li><a href="/archives.html">Archives</a></li>
-              </ul>
-            </ul>
-          </div>
-
-        </div>
-      </div>
+    <div id="root">
+      <!-- Google Botları için Uygulama Açıklaması -->
+      <!-- Bu içerik React yüklendiğinde otomatik olarak temizlenecektir -->
+      <section class="app-info-bot">
+        <h1>Mesai Takip Uygulaması Hakkında</h1>
+        <p>
+          Mesai Takip, çalışanların iş hayatını kolaylaştırmak için tasarlanmış kapsamlı bir araçtır. 
+          Bu uygulama ile günlük çalışma saatlerinizi kaydedebilir, fazla mesailerinizi takip edebilir 
+          ve ay sonunda alacağınız toplam maaşı tüm kesintileriyle birlikte hesaplayabilirsiniz.
+        </p>
+        <h2>Temel Özellikler:</h2>
+        <ul>
+          <li><strong>Hızlı Takip:</strong> Tek dokunuşla mesai giriş ve çıkış saatlerini kaydetme.</li>
+          <li><strong>Otomatik Hesaplama:</strong> Fazla mesai ücretleri ve maaş verilerinin anlık hesaplanması.</li>
+          <li><strong>Bulut Yedekleme:</strong> Google Drive entegrasyonu ile verilerinizi cihazlar arasında güvenle senkronize etme.</li>
+          <li><strong>Raporlama:</strong> Aylık çalışma performansınızı detaylı grafiklerle inceleme.</li>
+          <li><strong>Resmi Tatiller:</strong> Türkiye'deki dini ve resmi tatillerin otomatik takibi.</li>
+        </ul>
+        <p>
+          <a href="/mesaitakip/privacy.html">Gizlilik Politikası</a> | 
+          <a href="/mesaitakip/terms.html">Kullanım Şartları</a>
+          <br>
+          İletişim: kndmrefe@gmail.com
+        </p>
+      </section>
     </div>
-
-    <!-- CONTENT -->
-    <div class="container-fluid">
-      <div class="row">
-
-        <div class="span9" id="content">
-
-          <!-- ================= GOOGLE OAUTH LANDING ================= -->
-          <div style="background:#f8f9fa;border:1px solid #ddd;padding:18px;margin-bottom:20px;">
-
-            <h2>Mesai Takip Uygulaması</h2>
-
-            <p>
-              Mesai Takip, çalışanların çalışma saatlerini ve fazla mesai sürelerini takip etmelerini sağlayan bir web uygulamasıdır.
-            </p>
-
-            <p>
-              Kullanıcılar Google hesabı ile giriş yapar. Sadece temel profil bilgileri (isim ve e-posta) kullanılır.
-            </p>
-
-            <p>
-              Bu uygulama <b>efek0349</b> tarafından geliştirilmiş ve yönetilmektedir.
-            </p>
-
-            <p>
-              🔗 Source Code:
-              <a href="https://github.com/efek0349/mesaitakip">
-                GitHub Repository
-              </a>
-            </p>
-
-            <p>
-              🔐 Privacy Policy:
-              <a href="https://efek0349.github.io/mesaitakip/privacy.html">
-                https://efek0349.github.io/mesaitakip/privacy.html
-              </a>
-            </p>
-
-            <p>
-              📄 Terms of Service:
-              <a href="https://efek0349.github.io/mesaitakip/terms.html">
-                https://efek0349.github.io/mesaitakip/terms.html
-              </a>
-            </p>
-
-            <p>
-              ℹ️ Owned and maintained by GitHub user <b>efek0349</b>.
-            </p>
-
-          </div>
-          <!-- ==================================================== -->
-
-          <!-- BLOG POSTS -->
-          <div class="article">
-            <h1><a href="/redmi-9a-mtk-imei-repair.md.html">IMEI Yenileme Rehberi!</a></h1>
-            <div class="summary">Parasiz da olurmu bu isler :)</div>
-          </div>
-
-          <hr />
-
-          <div class="article">
-            <h1><a href="/openbsd-kali-beleth.md.html">Installing Beleth on OpenBSD</a></h1>
-          </div>
-
-          <hr />
-
-          <div class="article">
-            <h1><a href="/rockyou2024.md.html">2024 sifre listesi</a></h1>
-          </div>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="span3 well sidebar-nav" id="sidebar">
-
-          <ul class="nav nav-list">
-
-            <li class="nav-header">Links</li>
-            <li><a href="https://github.com/efek0349/mesaitakip">Mesai Takip App</a></li>
-
-            <li class="nav-header">Legal</li>
-            <li><a href="https://efek0349.github.io/mesaitakip/privacy.html">Privacy Policy</a></li>
-            <li><a href="https://efek0349.github.io/mesaitakip/terms.html">Terms of Service</a></li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      <hr>
-
-      <footer>
-        <address>
-          Email: kndmrefe@gmail.com | GitHub: efek0349
-        </address>
-      </footer>
-
-    </div>
-
+    
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
