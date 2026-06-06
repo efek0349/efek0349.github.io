@@ -2,354 +2,155 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Efek Blog</title>
+    <title>Mesai Takip</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="Mesai Takip - Time tracking application">
     <meta name="author" content="efek0349">
 
-    <!-- Le styles -->
     <link rel="stylesheet" href="/theme/css/bootstrap.dark.css" type="text/css" />
+
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
+
       .sidebar-nav {
         padding: 9px 0;
       }
-      .tag-1 {
-        font-size: 13pt;
+
+      .tag-1 { font-size: 13pt; }
+      .tag-2 { font-size: 10pt; }
+      .tag-3 { font-size: 8pt; }
+      .tag-4 { font-size: 6pt; }
+
+      .app-banner {
+        background: #f8f9fa;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
       }
-      .tag-2 {
-        font-size: 10pt;
-      }
-      .tag-2 {
-        font-size: 8pt;
-      }
-      .tag-4 {
-        font-size: 6pt;
-     }
     </style>
+
     <link href="/theme/css/bootstrap-responsive.dark.css" rel="stylesheet">
-        <link href="/theme/css/font-awesome.css" rel="stylesheet">
-
+    <link href="/theme/css/font-awesome.css" rel="stylesheet">
     <link href="/theme/css/pygments.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/theme/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png">
-
-    <link href="/" type="application/atom+xml" rel="alternate" title="Efek Blog ATOM Feed" />
-
   </head>
 
   <body>
 
+    <!-- NAVBAR -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/index.html">Efek Blog </a>
+
+          <a class="brand" href="/index.html">Mesai Takip</a>
+
           <div class="nav-collapse">
             <ul class="nav">
-                          <li class="divider-vertical"></li>
-                  <li >
-                    <a href="/category/hello.html">
-						<i class="icon-folder-open icon-large"></i>hello
-					</a>
-                  </li>
-                  <li >
-                    <a href="/category/kali.html">
-						<i class="icon-folder-open icon-large"></i>Kali
-					</a>
-                  </li>
-                  <li >
-                    <a href="/category/openbsd.html">
-						<i class="icon-folder-open icon-large"></i>OpenBSD
-					</a>
-                  </li>
-                  <li >
-                    <a href="/category/xiaomi.html">
-						<i class="icon-folder-open icon-large"></i>Xiaomi
-					</a>
-                  </li>
-
-                          <ul class="nav pull-right">
-                                <li><a href="/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-                          </ul>
-
+              <li class="divider-vertical"></li>
+              <li><a href="https://github.com/efek0349/mesaitakip">GitHub</a></li>
+              <li><a href="https://efek0349.github.io/mesaitakip/privacy.html">Privacy Policy</a></li>
+              <li><a href="https://efek0349.github.io/mesaitakip/terms.html">Terms</a></li>
             </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
+          </div>
+
         </div>
       </div>
     </div>
 
     <div class="container-fluid">
       <div class="row">
+
+        <!-- MAIN CONTENT -->
         <div class="span9" id="content">
-        <div class="article">
-                <h1><a href="/redmi-9a-mtk-imei-repair.md.html">IMEI Yenileme Rehberi!</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-07-28T02:03:00+03:00">
-        <i class="icon-calendar"></i>Sun 28 July 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/xiaomi.html"><i class="icon-folder-open"></i>Xiaomi</a>.
 
+          <!-- 🔥 GOOGLE OAUTH HOME PAGE SECTION -->
+          <div class="app-banner">
+            <h2>Mesai Takip Uygulaması</h2>
 
-<span class="label">Tags</span>
-	<a href="/tag/redmi-9a.html"><i class="icon-tag"></i>Redmi 9A</a>
-	<a href="/tag/mtk.html"><i class="icon-tag"></i>MTK</a>
-	<a href="/tag/repair-mac.html"><i class="icon-tag"></i>Repair MAC</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Parasiz da olurmu bu isler :)</p>
-                        <a class="btn primary xsmall" href="/redmi-9a-mtk-imei-repair.md.html">more ...</a>
-                </div>
+            <p>
+              Mesai Takip, çalışanların çalışma saatlerini ve mesai sürelerini takip etmelerini sağlayan bir web uygulamasıdır.
+            </p>
+
+            <p>
+              Kullanıcılar Google hesabı ile giriş yapar. Sadece temel kimlik doğrulama (email ve profil bilgisi) kullanılır.
+            </p>
+
+            <p>
+              Bu uygulama <b>efek0349</b> GitHub kullanıcısı tarafından geliştirilmiştir.
+            </p>
+
+            <p>
+              🔗 Source Code:
+              <a href="https://github.com/efek0349/mesaitakip">
+                GitHub Repository
+              </a>
+            </p>
+
+            <p>
+              🔐 Privacy Policy:
+              <a href="https://efek0349.github.io/mesaitakip/privacy.html">
+                View Privacy Policy
+              </a>
+            </p>
+
+            <p>
+              📄 Terms of Service:
+              <a href="https://efek0349.github.io/mesaitakip/terms.html">
+                View Terms
+              </a>
+            </p>
+          </div>
+
+          <!-- BLOG POSTS -->
+          <div class="article">
+            <h1><a href="/redmi-9a-mtk-imei-repair.md.html">IMEI Yenileme Rehberi!</a></h1>
+            <div class="summary">Parasiz da olurmu bu isler :)</div>
+          </div>
+
+          <hr />
+
+          <div class="article">
+            <h1><a href="/openbsd-kali-beleth.md.html">Installing Beleth on OpenBSD</a></h1>
+          </div>
+
+          <hr />
+
+          <div class="article">
+            <h1><a href="/rockyou2024.md.html">2024 sifre listesi</a></h1>
+          </div>
+
         </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/openbsd-kali-beleth.md.html">Installing Beleth on OpenBSD</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-07-28T01:48:00+03:00">
-        <i class="icon-calendar"></i>Sun 28 July 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/openbsd.html"><i class="icon-folder-open"></i>OpenBSD</a>.
 
+        <!-- SIDEBAR -->
+        <div class="span3 well sidebar-nav" id="sidebar">
 
-<span class="label">Tags</span>
-	<a href="/tag/beleth.html"><i class="icon-tag"></i>Beleth</a>
-	<a href="/tag/ssh.html"><i class="icon-tag"></i>SSH</a>
-	<a href="/tag/brute-force.html"><i class="icon-tag"></i>Brute force</a>
-	<a href="/tag/openbsd.html"><i class="icon-tag"></i>OpenBSD</a>
-	<a href="/tag/kali.html"><i class="icon-tag"></i>Kali</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Ah, the elusive duplicate symbol: verbose error—like an echo in the mountains, it reminds us that even code can have identity crises.</p>
-                        <a class="btn primary xsmall" href="/openbsd-kali-beleth.md.html">more ...</a>
-                </div>
+          <ul class="nav nav-list">
+
+            <li class="nav-header">Links</li>
+            <li><a href="https://github.com/efek0349/mesaitakip">Mesai Takip App</a></li>
+
+            <li class="nav-header">Legal</li>
+            <li><a href="https://efek0349.github.io/mesaitakip/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://efek0349.github.io/mesaitakip/terms.html">Terms of Service</a></li>
+
+          </ul>
+
         </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/rockyou2024.md.html">2024 yilinda sizdirilmis sifreler</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-07-23T16:13:00+03:00">
-        <i class="icon-calendar"></i>Tue 23 July 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/kali.html"><i class="icon-folder-open"></i>Kali</a>.
 
-
-<span class="label">Tags</span>
-	<a href="/tag/rockyou2024txt.html"><i class="icon-tag"></i>rockyou2024.txt</a>
-	<a href="/tag/password.html"><i class="icon-tag"></i>password</a>
-	<a href="/tag/cracking.html"><i class="icon-tag"></i>cracking</a>
-	<a href="/tag/kali.html"><i class="icon-tag"></i>kali</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>2024'un parola sizintisi ve wordlist duzenlemesi</p>
-                        <a class="btn primary xsmall" href="/rockyou2024.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/kali-cwm.md.html">Kali-linux CWM Masaustu kurulumu</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-06-29T20:33:00+03:00">
-        <i class="icon-calendar"></i>Sat 29 June 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/kali.html"><i class="icon-folder-open"></i>Kali</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/kali.html"><i class="icon-tag"></i>kali</a>
-	<a href="/tag/cwm.html"><i class="icon-tag"></i>cwm</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Fareden uzak duranlar icin! :)</p>
-                        <a class="btn primary xsmall" href="/kali-cwm.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/create-blog.md.html">OpenBSD ile blog olusturma sureci</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-06-24T16:29:00+03:00">
-        <i class="icon-calendar"></i>Mon 24 June 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/openbsd.html"><i class="icon-folder-open"></i>OpenBSD</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/prosesh.html"><i class="icon-tag"></i>prose.sh</a>
-	<a href="/tag/github.html"><i class="icon-tag"></i>github</a>
-	<a href="/tag/blog.html"><i class="icon-tag"></i>blog</a>
-	<a href="/tag/openbsd.html"><i class="icon-tag"></i>OpenBSD</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Kupcu Dukkanina donus</p>
-                        <a class="btn primary xsmall" href="/create-blog.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/hello.md.html">Merhaba</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-06-24T16:13:00+03:00">
-        <i class="icon-calendar"></i>Mon 24 June 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/hello.html"><i class="icon-folder-open"></i>hello</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/hello.html"><i class="icon-tag"></i>Hello</a>
-	<a href="/tag/tutorial.html"><i class="icon-tag"></i>tutorial</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Short version for index and feeds</p>
-                        <a class="btn primary xsmall" href="/hello.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/kali-kore.md.html">Kali linux Kore font sorunu</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-04-07T12:40:00+03:00">
-        <i class="icon-calendar"></i>Sun 07 April 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/kali.html"><i class="icon-folder-open"></i>kali</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/kali.html"><i class="icon-tag"></i>kali</a>
-	<a href="/tag/font.html"><i class="icon-tag"></i>font</a>
-	<a href="/tag/kore.html"><i class="icon-tag"></i>kore</a>
-	<a href="/tag/linux.html"><i class="icon-tag"></i>linux</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Lazim olmaz deme, bende oyle dedim, lazim oldu :)</p>
-                        <a class="btn primary xsmall" href="/kali-kore.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/linux-ile-modul-derleme.md.html">Kali ile modul derleme ve bios programlama.</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2024-02-08T23:31:00+03:00">
-        <i class="icon-calendar"></i>Thu 08 February 2024
-</abbr>
-<span class="label">By</span>
-<a href="/author/efek0349.html"><i class="icon-user"></i>efek0349</a>
-<span class="label">Category</span>
-<a href="/category/kali.html"><i class="icon-folder-open"></i>Kali</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/kali.html"><i class="icon-tag"></i>Kali</a>
-	<a href="/tag/bios.html"><i class="icon-tag"></i>bios</a>
-	<a href="/tag/eeprom.html"><i class="icon-tag"></i>eeprom</a>
-	<a href="/tag/modul.html"><i class="icon-tag"></i>modul</a>
-	<a href="/tag/kernel.html"><i class="icon-tag"></i>kernel</a>
-	<a href="/tag/linux.html"><i class="icon-tag"></i>linux</a>
-	<a href="/tag/programlama.html"><i class="icon-tag"></i>programlama</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Kali ile modul derleme ve kod duzenlemesi. Bios progralama denemeleri.</p>
-                        <a class="btn primary xsmall" href="/linux-ile-modul-derleme.md.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-
-        </div><!--/span-->
-
-                <div class="span3 well sidebar-nav" id="sidebar">
-<ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
-    <li><a href="https://github.com/efek0349/e480-opencore"><i class="icon-external-link"></i>MacOS-e480 opencore</a></li>
-    <li><a href="https://github.com/efek0349/dotfiles"><i class="icon-external-link"></i>dotfiles</a></li>
-    <li><a href="https://github.com/efek0349/obsd-progs"><i class="icon-external-link"></i>obsd-ports</a></li>
-	<li><a href="https://efek0349.github.io/mesaitakip/"><i class="icon-external-link"></i>mesai-takip</a></li>
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-<li><a href="/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
-    <li><a href="https://t.me/efek0349"><i class="icon-telegram-sign icon-large"></i>telegram</a></li>
-    <li><a href="https://twitter.com/efek0349"><i class="icon-X-sign icon-large"></i>X</a></li>
-
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="/category/hello.html">
-    <i class="icon-folder-open icon-large"></i>hello
-</a>
-</li>
-<li>
-<a href="/category/kali.html">
-    <i class="icon-folder-open icon-large"></i>Kali
-</a>
-</li>
-<li>
-<a href="/category/openbsd.html">
-    <i class="icon-folder-open icon-large"></i>OpenBSD
-</a>
-</li>
-<li>
-<a href="/category/xiaomi.html">
-    <i class="icon-folder-open icon-large"></i>Xiaomi
-</a>
-</li>
-
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-
-
-</ul>        </div><!--/.well -->
-
-      </div><!--/row-->
+      </div>
 
       <hr>
 
       <footer>
-        <address id="about">
-					Email: kndmrefe@gmail.com GPG: 0xC9E85BA0E9E1BACE
-        </address><!-- /#about -->
-
+        <address>
+          Email: kndmrefe@gmail.com | GitHub: efek0349
+        </address>
       </footer>
 
-    </div><!--/.fluid-container-->
+    </div>
 
-
-
-    <!-- Le javascript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/theme/js/jquery-1.7.2.min.js"></script>
-    <script src="/theme/js/bootstrap.min.js"></script>
   </body>
 </html>
